@@ -1,0 +1,26 @@
+%********************************************************************
+% Bibliography
+%*******************************************************
+% work-around to have small caps also here in the headline
+% https://tex.stackexchange.com/questions/188126/wrong-header-in-bibliography-classicthesis
+% Thanks to Enrico Gregorio
+\defbibheading{bibintoc}[\bibname]{%
+  \phantomsection
+  \manualmark
+  \markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}%
+  \addtocontents{toc}{\protect\vspace{\beforebibskip}}%
+  \addcontentsline{toc}{chapter}{\tocEntry{#1}}%
+  \chapter*{#1}%
+}
+\printbibliography[heading=bibintoc]
+
+% Old version, will be removed later
+% work-around to have small caps also here in the headline
+%\manualmark
+%\markboth{\spacedlowsmallcaps{\bibname}}{\spacedlowsmallcaps{\bibname}} % work-around to have small caps also
+%\phantomsection
+%\refstepcounter{dummy}
+%\addtocontents{toc}{\protect\vspace{\beforebibskip}} % to have the bib a bit from the rest in the toc
+%\addcontentsline{toc}{chapter}{\tocEntry{\bibname}}
+%\label{app:bibliography}
+%\printbibliography

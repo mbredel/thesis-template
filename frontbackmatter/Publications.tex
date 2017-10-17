@@ -1,0 +1,16 @@
+%*******************************************************
+% Publications
+%*******************************************************
+\pdfbookmark[1]{Publications}{publications}
+\chapter*{Publications}\graffito{This is just an early --~and currently ugly~-- test!}
+This might come in handy for PhD theses: some ideas and figures have appeared previously in the following publications:
+
+%\noindent Put your publications from the thesis here. The packages \texttt{multibib} or \texttt{bibtopic} etc. can be used to handle multiple different bibliographies in your document.
+
+\begin{refsection}[ownpubs]
+    \small
+    \nocite{*} % is local to to the enclosing refsection
+    \printbibliography[heading=none]
+\end{refsection}
+
+\emph{Attention}: This requires a separate run of \texttt{bibtex} for your \texttt{refsection}, \eg, \texttt{ClassicThesis1-blx} for this file. You might also use \texttt{biber} as the backend for \texttt{biblatex}. See also \url{http://tex.stackexchange.com/questions/128196/problem-with-refsection}.

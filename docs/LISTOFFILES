@@ -1,0 +1,194 @@
+LIST OF FILES FOR ClassicThesis.tex
+
+ *File List*
+ silence.sty    2012/07/02 v1.5b Selective filtering of warnings and error mess
+ages
+scrreprt.cls    2017/09/07 v3.24 KOMA-Script document class (report)
+scrkbase.sty    2017/09/07 v3.24 KOMA-Script package (KOMA-Script-dependent bas
+ics and keyval usage)
+ scrbase.sty    2017/09/07 v3.24 KOMA-Script package (KOMA-Script-independent b
+asics and keyval usage)
+  keyval.sty    2014/10/28 v1.15 key=value parser (DPC)
+scrlfile.sty    2017/09/07 v3.24 KOMA-Script package (loading files)
+tocbasic.sty    2017/09/07 v3.24 KOMA-Script package (handling toc-files)
+scrsize11pt.clo    2017/09/07 v3.24 KOMA-Script font size class option (11pt)
+typearea.sty    2017/09/07 v3.24 KOMA-Script package (type area)
+classicthesis-config.tex
+inputenc.sty    2015/03/17 v1.2c Input encoding file
+    utf8.def    2017/01/28 v1.1t UTF-8 support for inputenc
+   t1enc.dfu    2017/01/28 v1.1t UTF-8 support for inputenc
+  ot1enc.dfu    2017/01/28 v1.1t UTF-8 support for inputenc
+  omsenc.dfu    2017/01/28 v1.1t UTF-8 support for inputenc
+   babel.sty    2017/10/04 3.14 The Babel package
+ bblopts.cfg    2005/09/08 v0.1 add Arabic and Farsi to "declared" options of b
+abel
+ ngerman.ldf    2016/11/02 v2.9 German support for babel (new orthography)
+american.ldf    2017/06/06 v3.3r English support from the babel system
+csquotes.sty    2017/03/11 v5.2b context-sensitive quotations (JAW)
+etoolbox.sty    2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+csquotes.def    2017/03/11 v5.2b csquotes generic definitions (JAW)
+csquotes.cfg    
+biblatex.sty    2016/12/05 v3.7 programmable bibliographies (PK/JW/AB)
+pdftexcmds.sty    2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO)
+infwarerr.sty    2016/05/16 v1.4 Providing info/warning/error messages (HO)
+ifluatex.sty    2016/05/16 v1.4 Provides the ifluatex switch (HO)
+ ltxcmds.sty    2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+   ifpdf.sty    2017/03/15 v3.2 Provides the ifpdf switch
+kvoptions.sty    2016/05/16 v3.12 Key value format for package options (HO)
+kvsetkeys.sty    2016/05/16 v1.17 Key value parser (HO)
+etexcmds.sty    2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+  logreq.sty    2010/08/04 v1.0 xml request logger
+  logreq.def    2010/08/04 v1.0 logreq spec v1.0
+  ifthen.sty    2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+     url.sty    2013/09/16  ver 3.4  Verb mode for urls, etc.
+ xstring.sty    2013/10/13  v1.7c  String manipulations (C Tellechea)
+  blx-dm.def
+numeric-comp.dbx
+biblatex-dm.cfg
+blx-compat.def    2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
+blx-bibtex.def    2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
+biblatex.def    2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
+blx-natbib.def    2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
+standard.bbx    2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+ numeric.bbx    2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+numeric-comp.bbx    2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+numeric-comp.cbx    2016/12/05 v3.7 biblatex citation style (PK/JW/AB)
+biblatex.cfg    
+ amsmath.sty    2017/09/02 v2.17a AMS math features
+ amstext.sty    2000/06/29 v2.01 AMS text
+  amsgen.sty    1999/11/30 v2.0 generic functions
+  amsbsy.sty    1999/11/29 v1.2d Bold Symbols
+  amsopn.sty    2016/03/08 v2.02 operator names
+ fontenc.sty
+   t1enc.def    2017/04/05 v2.0i Standard LaTeX file
+textcomp.sty    2017/04/05 v2.0i Standard LaTeX package
+  ts1enc.def    2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+  ts1enc.dfu    2017/01/28 v1.1t UTF-8 support for inputenc
+ scrhack.sty    2017/09/07 v3.24 KOMA-Script package 
+  xpatch.sty    2012/10/02 v0.3 Extending etoolbox patching commands
+   expl3.sty    2017/09/18 L3 programming layer (loader) 
+expl3-code.tex    2017/09/18 L3 programming layer 
+l3pdfmode.def    2017/03/18 v L3 Experimental driver: PDF mode
+  xparse.sty    2017/09/18 L3 Experimental document command parser
+  xspace.sty    2014/10/28 v1.13 Space after command names (DPC,MH)
+mparhack.sty    2005/04/17 v1.4 (T. Sgouros and S. Ulrich)
+ acronym.sty    2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
+  suffix.sty    2006/07/15 1.5a Variant command support
+ relsize.sty    2003/07/04 ver 3.1
+tabularx.sty    2016/02/03 v2.11 `tabularx' package (DPC)
+   array.sty    2016/10/06 v2.4d Tabular extension package (FMi)
+ caption.sty    2016/02/21 v3.3-144 Customizing captions (AR)
+caption3.sty    2016/05/22 v1.7-166 caption3 kernel (AR)
+  subfig.sty    2005/06/28 ver: 1.3 subfig package
+listings.sty    2015/06/04 1.6 (Carsten Heinz)
+ lstmisc.sty    2015/06/04 1.6 (Carsten Heinz)
+listings.cfg    2015/06/04 1.6 listings configuration
+listings.hak    2017/09/07 v3.24 KOMA-Script package (hacking package listings)
+
+lstlang1.sty    2015/06/04 1.6 listings language file
+lstlang2.sty    2015/06/04 1.6 listings language file
+lstlang3.sty    2015/06/04 1.6 listings language file
+lstlang1.sty    2015/06/04 1.6 listings language file
+lstlang2.sty    2015/06/04 1.6 listings language file
+lstlang3.sty    2015/06/04 1.6 listings language file
+lstlang1.sty    2015/06/04 1.6 listings language file
+lstlang2.sty    2015/06/04 1.6 listings language file
+lstlang3.sty    2015/06/04 1.6 listings language file
+ lstmisc.sty    2015/06/04 1.6 (Carsten Heinz)
+hyperref.sty    2017/03/14 v6.85a Hypertext links for LaTeX
+hobsub-hyperref.sty    2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+hobsub-generic.sty    2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+  hobsub.sty    2016/05/16 v1.14 Construct package bundles (HO)
+  ifvtex.sty    2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+ intcalc.sty    2016/05/16 v1.2 Expandable calculations with integers (HO)
+kvdefinekeys.sty    2016/05/16 v1.4 Define keys (HO)
+pdfescape.sty    2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+bigintcalc.sty    2016/05/16 v1.4 Expandable calculations on big integers (HO)
+  bitset.sty    2016/05/16 v1.2 Handle bit-vector datatype (HO)
+uniquecounter.sty    2016/05/16 v1.3 Provide unlimited unique counter (HO)
+letltxmacro.sty    2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+ hopatch.sty    2016/05/16 v1.3 Wrapper for package hooks (HO)
+xcolor-patch.sty    2016/05/16 xcolor patch
+atveryend.sty    2016/05/16 v1.9 Hooks at the very end of document (HO)
+atbegshi.sty    2016/06/09 v1.18 At begin shipout hook (HO)
+refcount.sty    2016/05/16 v3.5 Data extraction from label references (HO)
+ hycolor.sty    2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+ ifxetex.sty    2010/09/12 v0.6 Provides ifxetex conditional
+ auxhook.sty    2016/05/16 v1.4 Hooks for auxiliary files (HO)
+  pd1enc.def    2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+hyperref.cfg    2002/06/06 v1.2 hyperref configuration of TeXLive
+ hpdftex.def    2017/03/14 v6.85a Hyperref driver for pdfTeX
+rerunfilecheck.sty    2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+graphicx.sty    2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+graphics.sty    2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+    trig.sty    2016/01/03 v1.10 sin cos tan (DPC)
+graphics.cfg    2016/06/04 v1.11 sample graphics configuration
+  pdftex.def    2017/06/24 v1.0g Graphics/color driver for pdftex
+classicthesis.sty    2017/10/13 v4.4 Typographic style for a classic-looking th
+esis
+latexrelease.sty    2016/12/29 v1.0h LaTeX release emulation and tests
+  xcolor.sty    2016/05/11 v2.12 LaTeX color extensions (UK)
+   color.cfg    2016/01/02 v1.6 sample color configuration
+dvipsnam.def    2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+mathpazo.sty    2005/04/12 PSNFSS-v9.2a Palatino w/ Pazo Math (D.Puga, WaS) 
+beramono.sty    2004/01/31 (WaS)
+    ueur.fd    2013/01/14 v3.01 Euler Roman
+microtype.sty    2017/07/07 v2.7 Micro-typographical refinements (RS)
+microtype-pdftex.def    2017/07/07 v2.7 Definitions specific to pdftex (RS)
+microtype.cfg    2017/07/07 v2.7 microtype main configuration file (RS)
+booktabs.sty    2005/04/14 v1.61803 publication quality tables
+textcase.sty    2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+scrlayer-scrpage.sty    2017/09/07 v3.24 KOMA-Script package (end user interfac
+e for scrlayer)
+scrlayer.sty    2017/09/07 v3.24 KOMA-Script package (defining layers and page 
+styles)
+titlesec.sty    2016/03/21 v2.10.2 Sectioning titles
+ tocloft.sty    2017/08/31 v2.3i parameterised ToC, etc., typesetting
+ scrtime.sty    2017/09/07 v3.24 KOMA-Script package (time of LaTeX run)
+prelim2e.sty    2009/05/29 v1.3 prelim2e Package (MS)
+everyshi.sty    2001/05/15 v3.00 EveryShipout Package (MS)
+ english.lbx    2016/12/05 v3.7 biblatex localization (PK/JW/AB)
+american.lbx    2016/12/05 v3.7 biblatex localization (PK/JW/AB)
+  german.lbx    2016/12/05 v3.7 biblatex localization (PK/JW/AB)
+ ngerman.lbx    2016/12/05 v3.7 biblatex localization (PK/JW/AB)
+  ts1cmr.fd    2014/09/29 v2.5h Standard LaTeX font definitions
+  t1pplj.fd    2004/09/06 font definitions for T1/pplj.
+ClassicThesis.bbl
+ClassicThesis1-blx.bbl
+ nameref.sty    2016/05/21 v2.44 Cross-referencing by name of section
+gettitlestring.sty    2016/05/16 v1.5 Cleanup title references (HO)
+ClassicThesis.out
+ClassicThesis.out
+supp-pdf.mkii
+epstopdf-base.sty    2016/05/15 v2.6 Base part for package epstopdf
+  grfext.sty    2016/05/16 v1.2 Manage graphics extensions (HO)
+  mt-ppl.cfg    2005/11/16 v1.6 microtype config. file: Palatino (RS)
+FrontBackmatter/DirtyTitlepage.tex
+ ot1pplx.fd    2004/09/06 font definitions for OT1/pplx.
+ omlzplm.fd    2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+ omszplm.fd    2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+ omxzplm.fd    2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+ ot1zplm.fd    2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+   t1fvm.fd    2004/09/07 scalable font definitions for T1/fvm.
+FrontBackmatter/Titlepage.tex
+gfx/TFZsuperellipse_bw.pdf
+FrontBackmatter/Titleback.tex
+ ts1pplj.fd    2004/09/06 font definitions for TS1/pplj.
+FrontBackmatter/Dedication.tex
+FrontBackmatter/Abstract.tex
+FrontBackmatter/Publications.tex
+FrontBackmatter/Acknowledgments.tex
+FrontBackmatter/Contents.tex
+Chapters/Chapter01.tex
+Chapters/Chapter02.tex
+gfx/example_1.jpg
+gfx/example_2.jpg
+gfx/example_3.jpg
+gfx/example_4.jpg
+Chapters/Chapter03.tex
+Chapters/Chapter0A.tex
+lstlang1.sty    2015/06/04 1.6 listings language file
+FrontBackmatter/Bibliography.tex
+FrontBackmatter/Declaration.tex
+FrontBackmatter/Colophon.tex
+ ***********
