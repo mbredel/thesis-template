@@ -1,0 +1,139 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hdahesis}[2015/01/22 v0.2 Typographic Style for an h_da thesis]
+\RequirePackage{ifthen}
+    \newboolean{@exam} % exam-version includes exam-questions - default is "false"
+    \newboolean{@big} % short version does not include paper-appendix - default ist "true"
+    \newboolean{@abbrev} % automaticaly generate acronyms
+    \newboolean{@index} % automaticaly generate index
+    \newboolean{@english} % use englich version
+    \newboolean{@wiwi} % use special version for Wirtschaftsingenieure
+    \newboolean{@doublespacing} % use 1.5 times line spacing
+    \newboolean{@lockflag} % thesis has a lock flag
+    \newboolean{@master} % a master thesis
+    \newboolean{@bacholor} % a bachelor thesis - not used!
+
+%*******************************************************************************
+% Options 
+%*******************************************************************************
+\DeclareOption{exam}{\setboolean{@exam}{true}}
+\DeclareOption{big}{\setboolean{@big}{true}}
+\DeclareOption{abbrev}{\setboolean{@abbrev}{true}}
+\DeclareOption{index}{\setboolean{@index}{true}}
+\DeclareOption{english}{\setboolean{@english}{true}}
+\DeclareOption{wiwi}{\setboolean{@wiwi}{true}}
+\DeclareOption{doublespacing}{\setboolean{@doublespacing}{true}}
+\DeclareOption{lockflag}{\setboolean{@lockflag}{true}}
+\DeclareOption{master}{\setboolean{@master}{true}}
+\DeclareOption{bachelor}{\setboolean{@bachelor}{false}}
+\ProcessOptions\relax
+
+%*******************************************************************************
+% Commands for EXAM, BIG, ABREV, INDEX, ENGLISH WIWI and DOUBLESPACING options 
+%*******************************************************************************
+\newcommand{\condBIG}[1]{\ifthenelse{\boolean{@big}}{#1}{}}
+\newcommand{\condEXAM}[1]{\ifthenelse{\boolean{@exam}}{#1}{}}
+\newcommand{\condWIWI}[2]{\ifthenelse{\boolean{@wiwi}}{#1}{#2}}
+\newcommand{\condENGLISH}[1]{\ifthenelse{\boolean{@english}}{#1}{}}
+\newcommand{\condDOUBLESPACING}[1]{\ifthenelse{\boolean{@doublespacing}}{#1}{}}
+\newcommand{\condTWOSIDE}[1]{\ifthenelse{\boolean{@twoside}}{#1}{}}
+\newcommand{\condLOCK}[1]{\ifthenelse{\boolean{@lockflag}}{#1}{}}
+\newcommand{\condMASTER}[1]{\ifthenelse{\boolean{@master}}{#1}{}}
+\newcommand{\condBACHELOR}[1]{\ifthenelse{\boolean{@bachelor}}{#1}{}}
+
+%*******************************************************************************
+% Theorems, Lemmas, Corollaries, and Proofs
+%*******************************************************************************
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{theorem}
+\theoremstyle{plain} {
+ \newtheorem{Theorem}{Theorem}
+ \newtheorem{Proposition}{Proposition}
+ \newtheorem{Lemma}{Lemma}
+ \newtheorem{Corollary}{Corollary}
+}
+\theoremstyle{plain} {{\theorembodyfont{\normalfont}
+\newtheorem{Definition}{Definition}}
+\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
+\newenvironment{proof}{\vspace{1ex}\noindent{\bf Proof}\hspace{0.5em}}
+	{\hfill\qed\vspace{2ex}}
+
+%*******************************************************************************
+% Double spacing between lines 
+%*******************************************************************************
+\ifthenelse{\boolean{@doublespacing}}{%
+    \RequirePackage[]{setspace}
+    }
+  {\relax}
+
+%*******************************************************************************
+% Acronyms - TODO: english version 
+%*******************************************************************************
+\ifthenelse{\boolean{@abbrev}}%
+{%
+    \RequirePackage[intoc]{nomencl}
+    \let\abbrev\nomenclature
+    \renewcommand{\nomname}{Abkürzungsverzeichnis}
+    \setlength{\nomlabelwidth}{.25\hsize}
+    \renewcommand{\nomlabel}[1]{#1 \dotfill}
+    \setlength{\nomitemsep}{-\parsep}
+}%
+{%
+    \relax
+}%
+
+%*******************************************************************************
+% Tabularx - Spalten 
+%*******************************************************************************
+\RequirePackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}         % zentrierte Spalten mit optimaler Breite
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}  % zentrierte Spalten mit Breitenangabe 
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe 
+
+%*******************************************************************************
+% Indices
+%*******************************************************************************
+\ifthenelse{\boolean{@index}}{%
+    \RequirePackage{makeidx}%
+    \newcommand{\Index}[1]{#1\index{#1}}}
+  {\relax}
+
+%*******************************************************************************
+% Colors 
+%*******************************************************************************
+\RequirePackage{color}
+\definecolor{shadecolor}{rgb}{1,1,.8}
+\definecolor{framecolor}{rgb}{.1,.1,.1}
+
+%*******************************************************************************
+% Fancy, colored frames
+%*******************************************************************************
+\RequirePackage{color}
+\RequirePackage{framed}
+
+% general colored frame environment
+\newenvironment{fshaded}{%
+    \def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}%
+    \MakeFramed {\advance\hsize-\width \FrameRestore}}%
+  {\endMakeFramed}
+
+% new colored itemize environment
+\newenvironment{fitemize}{%
+    \definecolor{shadecolor}{rgb}{1,1,.8}%
+    \definecolor{framecolor}{rgb}{.1,.1,.1}%
+    \begin{fshaded}\vspace{2mm}\begin{minipage}{0.9\textwidth}\begin{itemize}}%
+  {\end{itemize}\end{minipage}\vspace{2mm}\end{fshaded}}
+
+% new colored assignment environment
+\newenvironment{fassignment}{%
+    \definecolor{shadecolor}{rgb}{1,1,.8}%
+    \definecolor{framecolor}{rgb}{.1,.1,.1}%
+    \graffito{\vspace{4.0mm}\newline\includegraphics[width=15mm]{gfx/baustelle}}%
+    \begin{fshaded}\vspace{2mm}\begin{minipage}{0.9\textwidth}}%
+  {\end{minipage}\vspace{2mm}\end{fshaded}}
+
+%*******************************************************
+% Add additional packages
+%*******************************************************
+\RequirePackage{pdfpages}
+\RequirePackage{chngpage}

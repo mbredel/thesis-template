@@ -1,36 +1,63 @@
 %*******************************************************
 % Titlepage
 %*******************************************************
+%%%
+%%% title page (german)
+%%%
+\thispagestyle{empty}
+\pdfbookmark[0]{Titelblatt}{title}
 \begin{titlepage}
-    % if you want the titlepage to be centered, uncomment and fine-tune the line below (KOMA classes environment)
-    \begin{addmargin}[-1cm]{-3cm}
-    \begin{center}
-        \large
 
-        \hfill
+  % If printed on two sides, center the title page
+  \condTWOSIDE{\changetext{}{19mm}{}{19mm}{}}
 
-        \vfill
+  \vspace{1cm}
+  \begin{center}
+    \includegraphics[width=7.7cm]{gfx/logo_h-da_rot} \\ 
+  \end{center}
 
-        \begingroup
-            \color{Maroon}\spacedallcaps{\myTitle} \\ \bigskip
-        \endgroup
+  \begin{center}
+    \vspace{0.1cm}
+    \huge \textbf{\myUni}\\
+    \vspace{0.4cm}
+    \LARGE -- \myFaculty --
+  \end{center}
 
-        \spacedlowsmallcaps{\myName}
+  \vfill
+  \vfill
 
-        \vfill
+  \begin{center}
+    \LARGE \textbf{\myTitle}
+  \end{center} 
 
-        \includegraphics[width=6cm]{gfx/TFZsuperellipse_bw} \\ \medskip
+  \vfill
+  \vfill
 
-        \mySubtitle \\ \medskip
-        %\myDegree \\
-        %\myDepartment \\
-        %\myFaculty \\
-        %\myUni \\ \bigskip
+  \begin{center}
+    \Large Abschlussarbeit zur Erlangung des akademischen Grades\\
+    \vspace{0.3cm}
+    \Large \myDegree
+  \end{center}
 
-        \myTime\ -- \myVersion
+  \vfill
 
-        \vfill
+  \begin{center}
+    \Large vorgelegt von\\
+    \vspace{0.3cm}
+    \Large \textbf{\myName}
+  \end{center}
 
-    \end{center}
-  \end{addmargin}
+  \vfill
+  \vfill
+
+  \begin{center}
+    \begin{tabular}{lll}
+      Referent    & : & \myProf \\
+      Korreferent & : & \myOtherProf
+    \end{tabular}
+  \end{center} 
+
+  % If printed on two sides, center the title page
+  \condTWOSIDE{\changetext{}{-19mm}{}{-19mm}{}}
+
 \end{titlepage}

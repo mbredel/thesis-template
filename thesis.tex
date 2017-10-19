@@ -41,6 +41,7 @@
 %********************************************************************
 % Note: Make all your adjustments in here
 %*******************************************************
+\input{hdathesis-config}
 \input{classicthesis-config}
 
 %********************************************************************
@@ -68,10 +69,9 @@
 %********************************************************************
 % Frontmatter
 %*******************************************************
-\include{frontbackmatter/DirtyTitlepage}
 \include{frontbackmatter/Titlepage}
 \include{frontbackmatter/Titleback}
-\cleardoublepage\include{frontbackmatter/Dedication}
+%\cleardoublepage\include{frontbackmatter/Dedication}
 %\cleardoublepage\include{frontbackmatter/Foreword}
 \cleardoublepage\include{frontbackmatter/Abstract}
 \cleardoublepage\include{frontbackmatter/Publications}
@@ -87,7 +87,7 @@
 % use \cleardoublepage here to avoid problems with pdfbookmark
 \cleardoublepage
 \part{Some Kind of Manual}\label{pt:manual}
-\include{Chapters/Chapter01}
+\include{chapters/Chapter01}
 \cleardoublepage
 \ctparttext{You can put some informational part preamble text here.
 Illo principalmente su nos. Non message \emph{occidental} angloromanic
@@ -96,9 +96,9 @@ se avantiate publicationes via. Pan in terra summarios, capital
 interlingua se que. Al via multo esser specimen, campo responder que
 da. Le usate medical addresses pro, europa origine sanctificate nos se.}
 \part{The Showcase}\label{pt:showcase}
-\include{Chapters/Chapter02}
+\include{chapters/Chapter02}
 %\addtocontents{toc}{\protect\clearpage} % <--- just debug stuff, ignore
-\include{Chapters/Chapter03}
+\include{chapters/Chapter03}
 %\include{multiToC} % <--- just debug stuff, ignore for your documents
 % ********************************************************************
 % Backmatter
@@ -107,7 +107,7 @@ da. Le usate medical addresses pro, europa origine sanctificate nos se.}
 %\renewcommand{\thechapter}{\alph{chapter}}
 \cleardoublepage
 \part{Appendix}
-\include{Chapters/Chapter0A}
+\include{chapters/Chapter0A}
 %********************************************************************
 % Other Stuff in the Back
 %*******************************************************

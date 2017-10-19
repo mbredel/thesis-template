@@ -25,9 +25,9 @@
 % (see ClassicThesis.pdf for more information):
 % ****************************************************************************************************
 \PassOptionsToPackage{
-  drafting=true,    % print version information on the bottom of the pages
+  drafting=false,   % print version information on the bottom of the pages
   tocaligned=false, % the left column of the toc will be aligned (no indentation)
-  dottedtoc=false,  % page numbers in ToC flushed right
+  dottedtoc=true,   % page numbers in ToC flushed right
   parts=true,       % use part division
   eulerchapternumbers=true, % use AMS Euler for chapter font (otherwise Palatino)
   linedheaders=false,       % chaper headers will have line above and beneath
@@ -43,19 +43,19 @@
 % ****************************************************************************************************
 % 2. Personal data and user ad-hoc commands
 % ****************************************************************************************************
-\newcommand{\myTitle}{A Classic Thesis Style\xspace}
-\newcommand{\mySubtitle}{An Homage to The Elements of Typographic Style\xspace}
-\newcommand{\myDegree}{Doktor-Ingenieur (Dr.-Ing.)\xspace}
-\newcommand{\myName}{André Miede\xspace}
-\newcommand{\myProf}{Put name here\xspace}
-\newcommand{\myOtherProf}{Put name here\xspace}
-\newcommand{\mySupervisor}{Put name here\xspace}
-\newcommand{\myFaculty}{Put data here\xspace}
-\newcommand{\myDepartment}{Put data here\xspace}
-\newcommand{\myUni}{Put data here\xspace}
-\newcommand{\myLocation}{Saarbrücken\xspace}
-\newcommand{\myTime}{October 2017\xspace}
-\newcommand{\myVersion}{version 4.4}
+%\newcommand{\myTitle}{A Classic Thesis Style\xspace}
+%\newcommand{\mySubtitle}{An Homage to The Elements of Typographic Style\xspace}
+%\newcommand{\myDegree}{Doktor-Ingenieur (Dr.-Ing.)\xspace}
+%\newcommand{\myName}{André Miede\xspace}
+%\newcommand{\myProf}{Put name here\xspace}
+%\newcommand{\myOtherProf}{Put name here\xspace}
+%\newcommand{\mySupervisor}{Put name here\xspace}
+%\newcommand{\myFaculty}{Put data here\xspace}
+%\newcommand{\myDepartment}{Put data here\xspace}
+%\newcommand{\myUni}{Put data here\xspace}
+%\newcommand{\myLocation}{Saarbrücken\xspace}
+%\newcommand{\myTime}{October 2017\xspace}
+%\newcommand{\myVersion}{version 4.4}
 
 % ********************************************************************
 % Setup, finetuning, and useful commands
@@ -79,9 +79,10 @@
 %\PassOptionsToPackage{ngerman,american}{babel}   % change this to your language(s), main language last
 % Spanish languages need extra options in order to work with this template
 %\PassOptionsToPackage{spanish,es-lcroman}{babel}
-    \usepackage{babel}
+\usepackage{babel}
 
 \usepackage{csquotes}
+
 \PassOptionsToPackage{%
   %backend=biber,bibencoding=utf8, %instead of bibtex
   backend=bibtex8,bibencoding=ascii,%
@@ -94,10 +95,13 @@
   %backref=true,%
   natbib=true % natbib compatibility mode (\citep and \citet still work)
 }{biblatex}
-    \usepackage{biblatex}
+  \usepackage{biblatex}
 
 \PassOptionsToPackage{fleqn}{amsmath}       % math environments and more by the AMS
   \usepackage{amsmath}
+
+\PassOptionsToPackage{doublespacing}{hdathesis}  % options: abbrev exam big wiwi english master
+  \usepackage{hdathesis}
 
 % ********************************************************************
 % General useful packages
