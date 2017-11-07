@@ -7,7 +7,6 @@ all: clean
 	pdflatex ${MASTER}.tex
 	test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) 
 	pdflatex ${MASTER}.tex
-	ls -l ${MASTER}-blx.bib
 
 clean:
 	@rm -rf *run.xml *-blx.bib *.aux *.bbl *.blg *.brf *.log *.lof *.lot *.lol *.out *.tcp *.toc *.tps *.bak *.backup *.pdfsync *.synctex.gz *.*~
