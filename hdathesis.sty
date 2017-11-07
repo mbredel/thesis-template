@@ -5,12 +5,13 @@
     \newboolean{@big} % short version does not include paper-appendix - default ist "true"
     \newboolean{@abbrev} % automaticaly generate acronyms
     \newboolean{@index} % automaticaly generate index
-    \newboolean{@english} % use englich version
+    %\newboolean{@english} % use englich version
     \newboolean{@wiwi} % use special version for Wirtschaftsingenieure
     \newboolean{@doublespacing} % use 1.5 times line spacing
     \newboolean{@lockflag} % thesis has a lock flag
     \newboolean{@master} % a master thesis
     \newboolean{@bacholor} % a bachelor thesis - not used!
+\RequirePackage{iflang}
 
 %*******************************************************************************
 % Options 
@@ -19,7 +20,7 @@
 \DeclareOption{big}{\setboolean{@big}{true}}
 \DeclareOption{abbrev}{\setboolean{@abbrev}{true}}
 \DeclareOption{index}{\setboolean{@index}{true}}
-\DeclareOption{english}{\setboolean{@english}{true}}
+%\DeclareOption{english}{\setboolean{@english}{true}}
 \DeclareOption{wiwi}{\setboolean{@wiwi}{true}}
 \DeclareOption{doublespacing}{\setboolean{@doublespacing}{true}}
 \DeclareOption{lockflag}{\setboolean{@lockflag}{true}}
@@ -28,17 +29,18 @@
 \ProcessOptions\relax
 
 %*******************************************************************************
-% Commands for EXAM, BIG, ABREV, INDEX, ENGLISH WIWI and DOUBLESPACING options 
+% Commands for EXAM, BIG, ABREV, INDEX, ENGLISH, WIWI and DOUBLESPACING options 
 %*******************************************************************************
 \newcommand{\condBIG}[1]{\ifthenelse{\boolean{@big}}{#1}{}}
 \newcommand{\condEXAM}[1]{\ifthenelse{\boolean{@exam}}{#1}{}}
 \newcommand{\condWIWI}[2]{\ifthenelse{\boolean{@wiwi}}{#1}{#2}}
-\newcommand{\condENGLISH}[1]{\ifthenelse{\boolean{@english}}{#1}{}}
+%\newcommand{\condENGLISH}[1]{\ifthenelse{\boolean{@english}}{#1}{}}
 \newcommand{\condDOUBLESPACING}[1]{\ifthenelse{\boolean{@doublespacing}}{#1}{}}
 \newcommand{\condTWOSIDE}[1]{\ifthenelse{\boolean{@twoside}}{#1}{}}
 \newcommand{\condLOCK}[1]{\ifthenelse{\boolean{@lockflag}}{#1}{}}
 \newcommand{\condMASTER}[1]{\ifthenelse{\boolean{@master}}{#1}{}}
 \newcommand{\condBACHELOR}[1]{\ifthenelse{\boolean{@bachelor}}{#1}{}}
+\newcommand{\condENGLISH}[2]{\IfLanguageName{ngerman}{#2}{#1}}
 
 %*******************************************************************************
 % Theorems, Lemmas, Corollaries, and Proofs
