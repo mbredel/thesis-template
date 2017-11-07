@@ -1,4 +1,4 @@
-% **************************************************************************************************************
+%*************************************************************************
 % A Classic Thesis Style
 % An Homage to The Elements of Typographic Style
 %
@@ -27,7 +27,7 @@
 %
 % PLEASE SEE ALSO THE AUTHORS' NOTE REGARDING THIS LICENSE
 % IN THE DOCUMENTATION (ClassicThesis.pdf --> Chapter 1 / Chapter01.tex)
-% **************************************************************************************************************
+%*************************************************************************
 \RequirePackage{silence} % :-\
     \WarningFilter{scrreprt}{Usage of package `titlesec'}
     %\WarningFilter{scrreprt}{Activating an ugly workaround}
@@ -38,84 +38,79 @@
                 ngerman,american,%
                 ]{scrreprt}
 
-%********************************************************************
+%*************************************************************************
 % Note: Make all your adjustments in here
-%*******************************************************
+%*************************************************************************
 \input{hdathesis-config}
 \input{classicthesis-config}
 
-%********************************************************************
+%*************************************************************************
 % Bibliographies
-%*******************************************************
-\addbibresource{Bibliography.bib}
-\addbibresource[label=ownpubs]{AMiede_Publications.bib}
+%*************************************************************************
+\addbibresource{bibliography.bib}
 
-%********************************************************************
+%*************************************************************************
 % Hyphenation
-%*******************************************************
+%*************************************************************************
 %\hyphenation{put special hyphenation here}
 
-% ********************************************************************
+%*************************************************************************
 % GO!GO!GO! MOVE IT!
-%*******************************************************
+%*************************************************************************
 \begin{document}
 \frenchspacing
 \raggedbottom
-\selectlanguage{american} % american ngerman
+\selectlanguage{ngerman} % ngerman, american
 %\renewcommand*{\bibname}{new name}
 %\setbibpreamble{}
 \pagenumbering{roman}
 \pagestyle{plain}
-%********************************************************************
+%*************************************************************************
 % Frontmatter
-%*******************************************************
+%*************************************************************************
 \include{frontbackmatter/Titlepage}
 \include{frontbackmatter/Titleback}
 %\cleardoublepage\include{frontbackmatter/Dedication}
 %\cleardoublepage\include{frontbackmatter/Foreword}
-\cleardoublepage\include{frontbackmatter/Abstract}
-\cleardoublepage\include{frontbackmatter/Publications}
-\cleardoublepage\include{frontbackmatter/Acknowledgments}
+\cleardoublepage\include{frontbackmatter/Declaration}
+\cleardoublepage\include{frontbackmatter/AbstractEN}
+\cleardoublepage\include{frontbackmatter/AbstractDE}
+%\cleardoublepage\include{frontbackmatter/Publications}
+%\cleardoublepage\include{frontbackmatter/Acknowledgments}
 \cleardoublepage\include{frontbackmatter/Contents}
-%********************************************************************
+\cleardoublepage\include{frontbackmatter/Figures}
+\cleardoublepage\include{frontbackmatter/Tables}
+\cleardoublepage\include{frontbackmatter/Listings}
+\cleardoublepage\include{frontbackmatter/Acronyms}
+%*************************************************************************
 % Mainmatter
-%*******************************************************
+%*************************************************************************
 \cleardoublepage
 \pagestyle{scrheadings}
 \pagenumbering{arabic}
-%\setcounter{page}{90}
-% use \cleardoublepage here to avoid problems with pdfbookmark
+% Use \cleardoublepage here to avoid problems with pdfbookmark
 \cleardoublepage
 \part{Some Kind of Manual}\label{pt:manual}
 \include{chapters/Chapter01}
+% Alwas use \cleardoublepage before \part{...}.
 \cleardoublepage
-\ctparttext{You can put some informational part preamble text here.
-Illo principalmente su nos. Non message \emph{occidental} angloromanic
-da. Debitas effortio simplificate sia se, auxiliar summarios da que,
-se avantiate publicationes via. Pan in terra summarios, capital
-interlingua se que. Al via multo esser specimen, campo responder que
-da. Le usate medical addresses pro, europa origine sanctificate nos se.}
 \part{The Showcase}\label{pt:showcase}
 \include{chapters/Chapter02}
-%\addtocontents{toc}{\protect\clearpage} % <--- just debug stuff, ignore
 \include{chapters/Chapter03}
-%\include{multiToC} % <--- just debug stuff, ignore for your documents
-% ********************************************************************
+%*************************************************************************
 % Backmatter
-%*******************************************************
+%*************************************************************************
 \appendix
 %\renewcommand{\thechapter}{\alph{chapter}}
 \cleardoublepage
 \part{Appendix}
 \include{chapters/Chapter0A}
-%********************************************************************
+%*************************************************************************
 % Other Stuff in the Back
-%*******************************************************
+%*************************************************************************
 \cleardoublepage\include{frontbackmatter/Bibliography}
-\cleardoublepage\include{frontbackmatter/Declaration}
-\cleardoublepage\include{frontbackmatter/Colophon}
-% ********************************************************************
+%*************************************************************************
 % Game Over: Restore, Restart, or Quit?
-%*******************************************************
+%*************************************************************************
 \end{document}
-% ********************************************************************
+%*************************************************************************
