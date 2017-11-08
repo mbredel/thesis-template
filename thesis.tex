@@ -88,15 +88,12 @@
 \cleardoublepage
 \pagestyle{scrheadings}
 \pagenumbering{arabic}
-% Use \cleardoublepage here to avoid problems with pdfbookmark
-\cleardoublepage
-\part{Some Kind of Manual}\label{pt:manual}
-\include{chapters/Chapter01}
 % Alwas use \cleardoublepage before \part{...}.
 \cleardoublepage
 \part{The Showcase}\label{pt:showcase}
-\include{chapters/Chapter02}
-\include{chapters/Chapter03}
+\include{chapters/examples/chapter01}
+\include{chapters/examples/chapter02}
+\include{chapters/examples/chapter03}
 %*************************************************************************
 % Backmatter
 %*************************************************************************
@@ -104,7 +101,8 @@
 %\renewcommand{\thechapter}{\alph{chapter}}
 \cleardoublepage
 \part{Appendix}
-\include{chapters/Chapter0A}
+\include{chapters/examples/appendix01}
+\include{chapters/examples/appendix02}
 %*************************************************************************
 % Other Stuff in the Back
 %*************************************************************************
