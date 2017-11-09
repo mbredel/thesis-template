@@ -12,6 +12,7 @@ This LaTeX-template might be used to write a bachelor or master thesis at the co
     * [Table of content, figures, tables, listings, and acronyms](#table-of-content-figures-tables-listings-and-acronyms)
     * [Content files](#your-content-files)
   * [hdathesis-config.tex](#hdathesis-configtex)
+    * [Personal data](#personal-data)
   * [classicthesis-config.tex](#classicthesis-configtex)
   * [AbstractDE.tex and AbstractEN.tex](#abstractdetex-and-abstractentex)
 * [Usage](#usage)
@@ -98,6 +99,27 @@ By default, the thesis template contains (includes) some default content files f
 You may also want to have a look at the _part(...)_ section at line 93 and 103. You may want to change the titles of the _part(...)_-sections. Alternatively, you remove the _part(...)_ section and the corresponding _cleardoublepage_ the line before.
 
 ### hdathesis-config.tex
+
+The _hdathesis-config.tex_-file allows to configure the usual stuff needed for a thesis at h_da. Namely, you can configure the title of your thesis, your name, the names of your supervisors, dates, etc. Thus, you MUST touch this file and configure it accordingly.
+
+##### Personal data
+
+This is where you have to place all the personal stuff of your thesis, starting at line 7.
+
+```
+\newcommand{\myTitle}{A Classic Thesis Style\xspace}
+%\newcommand{\mySubtitle}{An Homage to The Elements of Typographic Style\xspace}
+\newcommand{\myDegree}{Bachelor of Science (B.Sc)\xspace}
+\newcommand{\myName}{Andr\'e Miede\xspace}
+\newcommand{\myId}{Matrikelnummer\xspace}
+\newcommand{\myProf}{Prof. Dr.-Ing. Michael Bredel\xspace}
+\newcommand{\myOtherProf}{Prof. Dr. Martin Stiemerling\xspace}
+\newcommand{\myFaculty}{Fachbereich Informatik\xspace}
+\newcommand{\myUni}{Hochschule Darmstadt\xspace}
+\newcommand{\myLocation}{Darmstadt\xspace}
+\newcommand{\myTime}{20. Feburar 2015\xspace}
+\newcommand{\myVersion}{version 4.4\xspace}
+```
 
 ### classicthesis-config.tex
 
