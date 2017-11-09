@@ -5,6 +5,15 @@ This LaTeX-template might be used to write a bachelor or master thesis at the co
 ## Table of contents
 
 * [Configuration](#configuration)
+  * [thesis.tex](#thesistex)
+    * [Two-sided vs. one-sided](#two-sided-vs-one-sided)
+    * [Bibliographies](#bibliographies)
+    * [Language](#language)
+    * [Table of content, figures, tables, listings, and acronyms](#table-of-content-figures-tables-listings-and-acronyms)
+    * [Content files](#your-content-files)
+  * [hdathesis-config.tex](#hdathesis-configtex)
+  * [classicthesis-config.tex](#classicthesis-configtex)
+  * [AbstractDE.tex and AbstractEN.tex](#abstractdetex-and-abstractentex)
 * [Usage](#usage)
 * [Known issues](#known-issues)
 * [License](#license)
