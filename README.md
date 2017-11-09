@@ -155,4 +155,4 @@ generates a bz2-package file, which contains all the source files of your LaTeX 
 
 ## License
 
-The h_da computer science department LaTeX thesis template is licences under GPL v3.0
+The h_da computer science department LaTeX thesis template is licenced under GPL v3.0
