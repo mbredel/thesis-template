@@ -123,12 +123,13 @@ This is where you have to place all the personal stuff of your thesis, starting 
 
 ### classicthesis-config.tex
 
+The _classicthesis-config.tex_-file allows you to configure stuff that comes with the classic-thesis style, like LaTeX packages used by classic thesis. This is quite advanced stuff already. Thus, you should touch this file only if you quite well what you are doing. Usually, you can leave the file as it is.
+
 ### AbstractDE.tex and AbstractEN.tex
 
 ## Usage
 
-The thesis template repository contains a Makefile that allows you to compile the thesis template using the _make_ t
-ool available on most Unix and Linux systems. Simply type:
+You may compile the hda-thesis template using the ```pdflatex```- and the ```bibtex```-command. In addition, the thesis template repository contains a Makefile that allows you to compile the thesis template using the _make_ tool available on most Unix and Linux systems. Simply type:
 
 ```
  $ make
