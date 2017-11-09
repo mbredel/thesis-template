@@ -107,6 +107,10 @@ In the following, we explain how to actually use, i.e. add content and compile, 
 
 ### Writing abstracts
 
+Every thesis has to have two abstracts; one in German and one in English. Thus, there are two abstract files included in the _thesis.tex_-file. Boths files, called _AbstractDE.tex_ for the German abstract and _AbstractEN.tex_ for the English abstract, are located in the _./frontbackmatter/_ directory.
+
+You have to modify both these files and place your abstract text in _AbstractDE.tex_ and _AbstractEN.tex_ respectively.
+
 ### Adding content
 
 By default, the thesis template, i.e. the _thesis.tex_-file, contains (includes) some default content files for chapters and appendix from the _./chapters/examples/_-directory (starting a line 94). You have to remove those includes and include your own files. Please note that it is best practice to put all your content in seperate files.
