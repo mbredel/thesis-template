@@ -129,7 +129,7 @@ The _classicthesis-config.tex_-file allows you to configure stuff that comes wit
 
 ## Usage
 
-You may compile the hda-thesis template using the ```pdflatex```- and the ```bibtex```-command. In addition, the thesis template repository contains a Makefile that allows you to compile the thesis template using the _make_ tool available on most Unix and Linux systems. Simply type:
+You may compile the hda-thesis template using the ```pdflatex``` and the ```bibtex``` command. In addition, the thesis template repository contains a Makefile that allows you to compile the thesis template using the _make_ tool available on most Unix and Linux systems. Simply type:
 
 ```
  $ make
