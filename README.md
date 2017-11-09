@@ -108,7 +108,7 @@ This is where you have to place all the personal stuff of your thesis, starting 
 
 ```
 \newcommand{\myTitle}{A Classic Thesis Style\xspace}
-%\newcommand{\mySubtitle}{An Homage to The Elements of Typographic Style\xspace}
+\newcommand{\mySubtitle}{An Homage to The Elements of Typographic Style\xspace}
 \newcommand{\myDegree}{Bachelor of Science (B.Sc)\xspace}
 \newcommand{\myName}{Andr\'e Miede\xspace}
 \newcommand{\myId}{Matrikelnummer\xspace}
