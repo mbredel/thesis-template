@@ -10,12 +10,13 @@ This LaTeX-template might be used to write a bachelor or master thesis at the co
     * [Bibliographies](#bibliographies)
     * [Language](#language)
     * [Table of content, figures, tables, listings, and acronyms](#table-of-content-figures-tables-listings-and-acronyms)
-    * [Content files](#your-content-files)
   * [hdathesis-config.tex](#hdathesis-configtex)
     * [Personal data](#personal-data)
   * [classicthesis-config.tex](#classicthesis-configtex)
-  * [AbstractDE.tex and AbstractEN.tex](#abstractdetex-and-abstractentex)
 * [Usage](#usage)
+  * [Writing abstracts](#writing-abstracts)
+  * [Adding content](#adding-content)
+  * [Compiling the LaTeX source code](#compiling-the-latex-source-code)
 * [Known issues](#known-issues)
 * [License](#license)
 
@@ -26,7 +27,7 @@ Please finde a brief description of the various configuration options below:
 
 ### thesis.tex
 
-The _thesis.tex_ file contains the basic structure and all the chapter-files that contain the actual content of your thesis. Thus, you have to modify this file in order to incorporate your content files.
+The _thesis.tex_ file contains the basic structure and all the chapter-files that contain the actual content of your thesis. Thus, you have to modify this file in order to configure some basic stuff like the language of your thesis. The subsequent section ["Adding content"](#adding-content) explains how to add content.
 
 ##### Two-sided vs. one-sided
 
@@ -73,31 +74,6 @@ By default, the thesis templates prints a lot of table of content, i.e. for figu
 %\cleardoublepage\include{frontbackmatter/Acronyms}
 ```
 
-##### Your content files
-
-By default, the thesis template contains (includes) some default content files for chapters and appendix from the _./chapters/examples/_-directory (starting a line 94). You have to remove those includes and include your own files. Please note that it is best practice to put all your content in seperate files.
-
-```
-\cleardoublepage
-\part{Thesis}\label{pt:thesis}
-%\include{chapters/examples/chapter01}
-%\include{chapters/examples/chapter02}
-%\include{chapters/examples/chapter03}
-... PUT YOUR INCLUDES FOR CHAPTERS HERE ...
-%*************************************************************************
-% Backmatter
-%*************************************************************************
-\appendix
-%\renewcommand{\thechapter}{\alph{chapter}}
-\cleardoublepage
-\part{Appendix}
-%\include{chapters/examples/appendix01}
-%\include{chapters/examples/appendix02}
-... PUT YOUR INCLUDES FOR APPENDIX HERE ...
-```
-
-You may also want to have a look at the _part(...)_ section at line 93 and 103. You may want to change the titles of the _part(...)_-sections. Alternatively, you remove the _part(...)_ section and the corresponding _cleardoublepage_ the line before.
-
 ### hdathesis-config.tex
 
 The _hdathesis-config.tex_-file allows to configure the usual stuff needed for a thesis at h_da. Namely, you can configure the title of your thesis, your name, the names of your supervisors, dates, etc. Thus, you MUST touch this file and configure it accordingly.
@@ -125,9 +101,38 @@ This is where you have to place all the personal stuff of your thesis, starting 
 
 The _classicthesis-config.tex_-file allows you to configure stuff that comes with the classic-thesis style, like LaTeX packages used by classic thesis. This is quite advanced stuff already. Thus, you should touch this file only if you quite well what you are doing. Usually, you can leave the file as it is.
 
-### AbstractDE.tex and AbstractEN.tex
-
 ## Usage
+
+In the following, we explain how to actually use, i.e. add content and compile, the thesis template to creage a nice and shiny PDF file that will please your supervisor.
+
+### Writing abstracts
+
+### Adding content
+
+By default, the thesis template, i.e. the _thesis.tex_-file, contains (includes) some default content files for chapters and appendix from the _./chapters/examples/_-directory (starting a line 94). You have to remove those includes and include your own files. Please note that it is best practice to put all your content in seperate files.
+
+```
+\cleardoublepage
+\part{Thesis}\label{pt:thesis}
+%\include{chapters/examples/chapter01}
+%\include{chapters/examples/chapter02}
+%\include{chapters/examples/chapter03}
+... PUT YOUR INCLUDES FOR CHAPTERS HERE ...
+%*************************************************************************
+% Backmatter
+%*************************************************************************
+\appendix
+%\renewcommand{\thechapter}{\alph{chapter}}
+\cleardoublepage
+\part{Appendix}
+%\include{chapters/examples/appendix01}
+%\include{chapters/examples/appendix02}
+... PUT YOUR INCLUDES FOR APPENDIX HERE ...
+```
+
+You may also want to have a look at the _part(...)_ section at line 93 and 103. You may want to change the titles of the _part(...)_-sections. Alternatively, you remove the _part(...)_ section and the corresponding _cleardoublepage_ the line before.
+
+### Compiling the LaTeX source code
 
 You may compile the hda-thesis template using the ```pdflatex``` and the ```bibtex``` command. In addition, the thesis template repository contains a Makefile that allows you to compile the thesis template using the _make_ tool available on most Unix and Linux systems. Simply type:
 
