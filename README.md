@@ -26,7 +26,7 @@ Please finde a brief description of the various configuration options below:
 
 ### thesis.tex
 
-The _thesis.tex_ file contains the basic structure all the chapter-files that contain the actual content of your thesis. Thus, you have to modify this file in order to incorporate your content files.
+The _thesis.tex_ file contains the basic structure and all the chapter-files that contain the actual content of your thesis. Thus, you have to modify this file in order to incorporate your content files.
 
 ##### Two-sided vs. one-sided
 
