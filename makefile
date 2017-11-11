@@ -8,6 +8,10 @@ all: clean
 	test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) 
 	pdflatex ${MASTER}.tex
 
+publish: all
+	@ps2pdf14 -dPDFSETTINGS=/prepress thesis.pdf
+	@mv thesis.pdf.pdf thesis.pdf
+
 clean:
 	@rm -rf *run.xml *-blx.bib *.aux *.bbl *.blg *.brf *.log *.lof *.lot *.lol *.out *.tcp *.toc *.tps *.bak *.backup *.pdfsync *.synctex.gz *.*~
 	@for i in run.xml -blx.bib aux bbl blg brf log lof lot lol out tcp toc tps bak backup pdfsync synctex.gz; do find -name *.$$i -exec rm {} + ; done
