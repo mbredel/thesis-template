@@ -4,9 +4,9 @@ NAME    = Max
 SURNAME = Mustermann
 
 all: clean
-	pdflatex ${MASTER}.tex
-	test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) 
-	pdflatex ${MASTER}.tex
+	@pdflatex ${MASTER}.tex
+	@test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) 
+	@pdflatex ${MASTER}.tex
 
 publish: all
 	@ps2pdf14 -dPDFSETTINGS=/prepress thesis.pdf
