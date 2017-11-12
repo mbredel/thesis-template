@@ -158,7 +158,11 @@ to remove all temporary files, which are produced during the compilation process
  $ make bz2
 ```
 
-generates a bz2-package file, which contains all the source files of your LaTeX code.
+generates a bz2-package file, which contains all the source files of your LaTeX code. In case you need to create a PDF-version with embedded fonts you may use
+
+```
+ $ make publish
+```
 
 ## Known issues
 
