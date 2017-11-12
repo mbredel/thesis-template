@@ -19,6 +19,7 @@ This LaTeX-template might be used to write a bachelor or master thesis at the co
   * [Writing abstracts](#writing-abstracts)
   * [Adding content](#adding-content)
   * [Compiling the LaTeX source code](#compiling-the-latex-source-code)
+  * [Using Docker](#using-docker)
 * [Known issues](#known-issues)
 * [License](#license)
 
@@ -163,6 +164,16 @@ generates a bz2-package file, which contains all the source files of your LaTeX 
 ```
  $ make publish
 ```
+
+### Using Docker
+
+The h_da thesis template ships with a Dockerfile that creates a [Docker](https://www.docker.com) container used to compile the LaTeX code. This container is used by the Travis-CI infrastructure to compile the thesis template and check its integrity at every commit. To build the Docker container, you may type
+
+```
+ $ docker build --label mbredel/thesis-template .
+```
+
+inside the root directory containing the Dockerfile. You may leverage the Docker container to compile the thesis template without installing the LaTeX build system on your computer. However, please note that additional steps are needed to create the PDF file and copy it from the Docker container to your host.
 
 ## Known issues
 
