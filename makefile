@@ -20,6 +20,11 @@ clean:
 cleanall: clean
 	@rm *.pdf
 
+test: clean
+	@pdflatex -interaction=nonstopmode -halt-on-error ${MASTER}.tex
+	@test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) 
+	@pdflatex ${MASTER}.tex
+
 bz2: clean
 	@echo 'creating package including Docs'
 	@tar --exclude-vcs -cf `pwd`/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`.tar `pwd`/../`pwd | sed "s,^\(.*/\)\?\([^/]*\),\2,"`
