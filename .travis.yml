@@ -3,18 +3,9 @@ dist: trusty
 branches:
   only:
     - master
+services:
+  - docker
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y --no-install-recommends texlive 
-  - sudo apt-get install -y --no-install-recommends texlive-bibtex-extra
-  - sudo apt-get install -y --no-install-recommends texlive-fonts-extra
-  - sudo apt-get install -y --no-install-recommends texlive-lang-english
-  - sudo apt-get install -y --no-install-recommends texlive-lang-german
-  - sudo apt-get install -y --no-install-recommends texlive-latex-extra
-  - sudo apt-get install -y --no-install-recommends texlive-math-extra
-  - sudo apt-get install -y --no-install-recommends texlive-publishers
-  - sudo apt-get install -y --no-install-recommends texlive-science
+  - docker pull ubuntu:16.04
 script:
-  - pdflatex -interaction=nonstopmode -halt-on-error thesis.tex
-  - test -f thesis-blx.bib && ( bibtex thesis; pdflatex thesis.tex ) 
-  - pdflatex -interaction=nonstopmode -halt-on-error thesis.tex
+  - docker run ubuntu:16:04
