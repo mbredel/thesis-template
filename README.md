@@ -177,6 +177,8 @@ inside the root directory containing the Dockerfile. You may leverage the Docker
 
 ## Known issues
 
+* The LaTeX template is tested using [TeXLive](https://www.tug.org/texlive/) which is available for Linux and Windows.
+  * It has not been tested for [MiKTeX](https://miktex.org/) and [MacTeX](https://www.tug.org/mactex/) yet. Any input on these LaTeX distributions is very welcome.
 * The LaTeX template only supports bachelor theses (by default)
 * The thesis only supports German and (American) English
 
