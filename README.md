@@ -2,23 +2,24 @@
 
 # A thesis LaTeX-template
 
-This LaTeX-template might be used to write a bachelor or master thesis at the computer science department at [h_da university of applied sciences](https://www.fbi.h-da.de/fbi.html "Hochschule Darmstadt, University of Applied Sciences") in Darstmadt. It is based on the fabulous ClassicThesis style template of [Andre Miedé](http://www.miede.de/ "Prof. Dr. Andre Miedé"). It is adapted to meet the current style guide for bachelor and master theses at the computer science department of h_da, as outlined in [Richtlinien zur Anfertigung der Bachelorarbeit](https://www.fbi.h-da.de/fileadmin/Inhalt/dokumente/Bachelor/BachelorProjekt/Richtlinien_Bachelorarbeit_070619.pdf)
+This LaTeX-template might be used to write a bachelor or master thesis at the Computer Science department at [h_da University of Applied Sciences](https://www.fbi.h-da.de/fbi.html "Hochschule Darmstadt, University of Applied Sciences") in Darmstadt. It is based on the fabulous ClassicThesis style template of [Andre Miedé](http://www.miede.de/ "Prof. Dr. Andre Miedé"). It is adapted to meet the current style guide for bachelor and master theses at the Computer Science department of h_da, as outlined in [Richtlinien zur Anfertigung der Bachelorarbeit](https://www.fbi.h-da.de/fileadmin/Inhalt/dokumente/Bachelor/BachelorProjekt/Richtlinien_Bachelorarbeit_070619.pdf)
 
 ## Table of contents
 
 * [Configuration](#configuration)
-  * [thesis.tex](#thesistex)
+  * [thesis.tex](#thesistex "Configuration options in the thesis.tex file")
     * [Two-sided vs. one-sided](#two-sided-vs-one-sided)
-    * [Bibliographies](#bibliographies)
-    * [Language](#language)
+    * [Bibliographies](#bibliographies "How to add additional bibligraphy files")
+    * [Language](#language "How to change the language of the document")
     * [Table of content, figures, tables, listings, and acronyms](#table-of-content-figures-tables-listings-and-acronyms)
   * [hdathesis-config.tex](#hdathesis-configtex)
-    * [Personal data](#personal-data)
+    * [Personal data](#personal-data "How to edit the personal data of the thesis")
   * [classicthesis-config.tex](#classicthesis-configtex)
 * [Usage](#usage)
-  * [Writing abstracts](#writing-abstracts)
-  * [Adding content](#adding-content)
+  * [Writing abstracts](#writing-abstracts "Adding abstracts to the thesis")
+  * [Adding content](#adding-content "Adding chapters to the thesis")
   * [Compiling the LaTeX source code](#compiling-the-latex-source-code)
+  * [Using Docker](#using-docker "Using Docker for compiling the LaTeX code")
 * [Known issues](#known-issues)
 * [License](#license)
 
@@ -38,7 +39,7 @@ The default output of the LaTeX thesis template a two-sided style that also has 
 ```
 \documentclass[ openright,titlepage,numbers=noenddot,headinclude,%
                 footinclude=true,cleardoublepage=empty,abstractoff,%
-                BCOR=5mm,paper=a4,fontsize=11pt,
+                BCOR=5mm,paper=a4,fontsize=11pt,%
                 ngerman,american,%
                 ]{scrreprt}
 ``` 
@@ -158,10 +159,26 @@ to remove all temporary files, which are produced during the compilation process
  $ make bz2
 ```
 
-generates a bz2-package file, which contains all the source files of your LaTeX code.
+generates a bz2-package file, which contains all the source files of your LaTeX code. In case you need to create a PDF-version with embedded fonts you may use
+
+```
+ $ make publish
+```
+
+### Using Docker
+
+The h_da thesis template ships with a Dockerfile that creates a [Docker](https://www.docker.com) container used to compile the LaTeX code. This container is used by the Travis-CI infrastructure to compile the thesis template and check its integrity at every commit. To build the Docker container, you may type
+
+```
+ $ docker build --label mbredel/thesis-template .
+```
+
+inside the root directory containing the Dockerfile. You may leverage the Docker container to compile the thesis template without installing the LaTeX build system on your computer. However, please note that additional steps are needed to create the PDF file and copy it from the Docker container to your host.
 
 ## Known issues
 
+* The LaTeX template is tested using [TeXLive](https://www.tug.org/texlive/) which is available for Linux and Windows.
+  * It has not been tested for [MiKTeX](https://miktex.org/) and [MacTeX](https://www.tug.org/mactex/) yet. Any input on these LaTeX distributions is very welcome.
 * The LaTeX template only supports bachelor theses (by default)
 * The thesis only supports German and (American) English
 
