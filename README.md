@@ -167,13 +167,21 @@ generates a bz2-package file, which contains all the source files of your LaTeX 
 
 ### Using Docker
 
-The h_da thesis template ships with a Dockerfile that creates a [Docker](https://www.docker.com) container used to compile the LaTeX code. This container is used by the Travis-CI infrastructure to compile the thesis template and check its integrity at every commit. To build the Docker container, you may type
+The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - build by the [Dockerfile.travis]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.travis) Docker file - is used by the Travis-CI infrastructure to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file might be uesed to build the Docker container that allows to compile the Latex code on your local machine without the need to install any Latex files.
+
+On order to build the Docker image you have to type the following command:
 
 ```
- $ docker build --tag mbredel/thesis-template .
+ $ docker build --tag mbredel/thesis-template --file Dockerfile.local .
 ```
 
-inside the root directory containing the Dockerfile. You may leverage the Docker container to compile the thesis template without installing the LaTeX build system on your computer. However, please note that additional steps are needed to create the PDF file and copy it from the Docker container to your host.
+Creating the image requires a working (and hopefully fast) Internet connection. It may take several minutes to download the requrired base-images as well as all needed dependencies. You only have to create the image once. When the image is build, you can run the Docker container by executing the following commad
+
+```
+ $ docker run --volume $(pwd):/thesis-template/ mbredel/thesis-template && docker rm $(docker ps -lq)
+ ```
+
+inside the root directory containing the Latex code. The command mounts the current directory into the Docker container, runs the "publish" make target, and thus compiles the Latex code into a PDF file. Finally, the command removes the container again, as it is not needed anymore.
 
 ## Known issues
 
@@ -185,3 +193,7 @@ inside the root directory containing the Dockerfile. You may leverage the Docker
 ## License
 
 The h_da computer science department LaTeX thesis template is licenced under GPL v3.0
+
+## Acknowledgements
+
+* Many thanks to Sebastian Jung for his hints on the local Docker approach for compiling the Latex code. 
