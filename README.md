@@ -102,11 +102,11 @@ This is where you have to place all the personal stuff of your thesis, starting 
 
 ### classicthesis-config.tex
 
-The _classicthesis-config.tex_-file allows you to configure stuff that comes with the classic-thesis style, like LaTeX packages used by classic thesis. This is quite advanced stuff already. Thus, you should touch this file only if you quite well what you are doing. Usually, you can leave the file as it is.
+The _classicthesis-config.tex_-file allows you to configure stuff that comes with the classic-thesis style, like LaTeX packages used by classic thesis. This is quite advanced stuff already. Thus, you should touch this file only if you know what you are doing. Usually, you can leave the file as it is.
 
 ## Usage
 
-In the following, we explain how to actually use, i.e. add content and compile, the thesis template to creage a nice and shiny PDF file that will please your supervisor.
+In the following, we explain how to actually use, i.e. add content and compile, the thesis template to create a nice and shiny PDF file that will please your supervisor.
 
 ### Writing abstracts
 
