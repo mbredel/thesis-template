@@ -34,7 +34,7 @@ The _thesis.tex_ file contains the basic structure and all the chapter-files tha
 
 ##### Two-sided vs. one-sided
 
-The default output of the LaTeX thesis template a two-sided style that also has to be printet that way. In case you want to print one-sided only, you have to remove the _twoside_ option in the _\documentclass_ definition at line 35:
+The default output of the LaTeX thesis template is a two-sided style that also has to be printet that way. In case you want to print one-sided only, you have to remove the _twoside_ option in the _\documentclass_ definition at line 35:
 
 ```
 \documentclass[ openright,titlepage,numbers=noenddot,headinclude,%
