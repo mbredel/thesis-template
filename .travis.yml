@@ -6,6 +6,6 @@ branches:
 services:
   - docker
 before_install:
-  - docker build --tag mbredel/thesis-template:latest .
+  - docker build --tag mbredel/thesis-template:latest --file Dockerfile.travis .
 script:
   - docker run mbredel/thesis-template:latest
