@@ -183,6 +183,8 @@ Creating the image requires a working (and hopefully fast) Internet connection. 
 
 inside the root directory containing the LaTeX code. The command mounts the current directory into the Docker container, runs the "publish" make target, and thus compiles the LaTeX code into a PDF file. Finally, the command removes the container again, as it is not needed anymore. You may re-compile the LaTeX code by re-running the "docker run ..." command again.
 
+For more information on Docker, please take a look at the [Docker documentation](https://docs.docker.com/).
+
 ## Known issues
 
 * The LaTeX template is tested using [TeXLive](https://www.tug.org/texlive/) which is available for Linux and Windows.
