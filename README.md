@@ -167,7 +167,7 @@ generates a bz2-package file, which contains all the source files of your LaTeX 
 
 ### Using Docker
 
-The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - build by the [Dockerfile.travis]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.travis) Docker file - is used by the Travis-CI infrastructure to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file might be uesed to build the Docker container that allows to compile the Latex code on your local machine without the need to install any Latex files.
+The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - build by the [Dockerfile.travis]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.travis) Docker file - is used by the Travis-CI infrastructure to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file might be uesed to build the Docker container that allows to compile the LaTeX code on your local machine without the need to install any LaTeX files.
 
 On order to build the Docker image you have to type the following command:
 
@@ -181,10 +181,10 @@ Creating the image requires a working (and hopefully fast) Internet connection. 
  $ docker run --volume $(pwd):/thesis-template/ mbredel/thesis-template && docker rm $(docker ps -lq)
  ```
 
-inside the root directory containing the Latex code. The command mounts the current directory into the Docker container, runs the "publish" make target, and thus compiles the Latex code into a PDF file. Finally, the command removes the container again, as it is not needed anymore.
+inside the root directory containing the LaTeX code. The command mounts the current directory into the Docker container, runs the "publish" make target, and thus compiles the LaTeX code into a PDF file. Finally, the command removes the container again, as it is not needed anymore. You may re-compile the LaTeX code by re-running the "docker run ..." command again.
 
 ## Known issues
-
+.
 * The LaTeX template is tested using [TeXLive](https://www.tug.org/texlive/) which is available for Linux and Windows.
   * It has not been tested for [MiKTeX](https://miktex.org/) and [MacTeX](https://www.tug.org/mactex/) yet. Any input on these LaTeX distributions is very welcome.
 * The LaTeX template only supports bachelor theses (by default)
@@ -196,4 +196,4 @@ The h_da computer science department LaTeX thesis template is licenced under GPL
 
 ## Acknowledgements
 
-* Many thanks to Sebastian Jung for his hints on the local Docker approach for compiling the Latex code. 
+* Many thanks to Sebastian Jung for his hints on the local Docker approach for compiling the LaTeX code. 
