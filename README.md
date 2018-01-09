@@ -60,7 +60,7 @@ By default all bibliographies that can be referenced in the thesis are put into 
 
 ##### Language
 
-The default langauge of your thesis is German. If you want to switch to English, you have to modify the language selection from _ngerman_ to _american_ at line 63.
+The default language of your thesis is German. If you want to switch to English, you have to modify the language selection from _ngerman_ to _american_ at line 63.
 
 ```
 \selectlanguage{american} % ngerman, american
