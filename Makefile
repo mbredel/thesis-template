@@ -5,7 +5,7 @@ SURNAME = Mustermann
 
 all: clean
 	@pdflatex ${MASTER}.tex
-	@test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) 
+	@test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) || echo "No Bibtex"
 	@pdflatex ${MASTER}.tex
 
 publish: all
@@ -22,7 +22,7 @@ cleanall: clean
 
 test: clean
 	@pdflatex -interaction=nonstopmode -halt-on-error ${MASTER}.tex
-	@test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) 
+	@test -f ${MASTER}-blx.bib && ( bibtex ${MASTER}; pdflatex ${MASTER}.tex ) || echo "No Bibtex" 
 	@pdflatex ${MASTER}.tex
 
 bz2: clean
