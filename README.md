@@ -14,6 +14,7 @@ This LaTeX-template might be used to write a bachelor or master thesis at the Co
     * [Table of content, figures, tables, listings, and acronyms](#table-of-content-figures-tables-listings-and-acronyms)
   * [hdathesis-config.tex](#hdathesis-configtex)
     * [Personal data](#personal-data "How to edit the personal data of the thesis")
+    * [Umlauts](#umlauts "How to use umlauts in the personal data/on the tile page of the thesis")
   * [classicthesis-config.tex](#classicthesis-configtex)
 * [Usage](#usage)
   * [Writing abstracts](#writing-abstracts "Adding abstracts to the thesis")
@@ -66,6 +67,8 @@ The default language of your thesis is German. If you want to switch to English,
 \selectlanguage{american} % ngerman, american
 ```
 
+While this thesis template supports umlauts, i.e. ÄÖÜäöüß, in the main text of the thesis, there are some issues regarding umlauts on the title page (configured in the personal data at [hdathesis-config.tex](#hdathesis-configtex)). Please see the [umlauts](#umlauts "How to use umlauts in the personal data/on the tile page of the thesis") section for further details and possible solutions.
+
 ##### Table of content, figures, tables, listings, and acronyms
 
 By default, the thesis templates prints a lot of table of content, i.e. for figures, tables, listings, and aconyms. You may want to remove such tables if you only have a very limited number, i.e. less then 3-5, of figures, tables, listings, and acronyms. Simply comment the related line in _thesis.tex_ starting at line 81.
@@ -99,6 +102,22 @@ This is where you have to place all the personal stuff of your thesis, starting 
 \newcommand{\myTime}{20. Feburar 2015\xspace}
 \newcommand{\myVersion}{version 4.4\xspace}
 ```
+
+#### Umlauts
+
+This thesis templates supports German umlauts in the main text. However, if you need umlauts on the title page, say in your title, your name, and your professor's name, you have to use the native LaTeX way of writing umlauts. Please see the following table:
+
+| Umlaut | LaTeX way |
+|--------|-----------|
+| Ä      | {\"A}     |
+| Ö      | {\"Ö}     |
+| Ü      | {\"Ü}     |
+| ä      | {\"a}     |
+| ö      | {\"o}     |
+| ü      | {\"u}     |
+| ß      | {\ss}     |
+
+To write the Title "TOR - Schießen mit Füßen" you have to write "TOR - Schie{\ss}en mit F{\"u}{\ss}en".
 
 ### classicthesis-config.tex
 
