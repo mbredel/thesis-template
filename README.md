@@ -109,12 +109,12 @@ This thesis templates supports German umlauts in the main text. However, if you 
 
 | Umlaut | LaTeX way |
 |--------|-----------|
-| Ä      | {\"A}     |
-| Ö      | {\"Ö}     |
-| Ü      | {\"Ü}     |
-| ä      | {\"a}     |
-| ö      | {\"o}     |
-| ü      | {\"u}     |
+| Ä      | {\\"A}     |
+| Ö      | {\\"Ö}     |
+| Ü      | {\\"Ü}     |
+| ä      | {\\"a}     |
+| ö      | {\\"o}     |
+| ü      | {\\"u}     |
 | ß      | {\ss}     |
 
 To write the Title "TOR - Schießen mit Füßen" you have to write "TOR - Schie{\ss}en mit F{\"u}{\ss}en".
