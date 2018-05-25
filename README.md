@@ -35,7 +35,7 @@ The _thesis.tex_ file contains the basic structure and all the chapter-files tha
 
 ##### Two-sided vs. one-sided
 
-The default output of the LaTeX thesis template is a single-sided style that also has to be printet that way. In case you want to print two-sided, you have to add the _twoside_ option in the _\documentclass_ definition at line 35:
+The default output of the LaTeX thesis template is a single-sided style that also has to be printed that way. In case you want to print two-sided, you have to add the _twoside_ option in the _\documentclass_ definition at line 35:
 
 ```
 \documentclass[ openright,titlepage,numbers=noenddot,headinclude,twoside,%
@@ -186,7 +186,7 @@ generates a bz2-package file, which contains all the source files of your LaTeX 
 
 ### Using Docker
 
-The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - build by the [Dockerfile.travis]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.travis) Docker file - is used by the Travis-CI infrastructure to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file - might be uesed to build the Docker container that allows to compile the LaTeX code on your local machine without the need to install any LaTeX files.
+The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - build by the [Dockerfile.travis]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.travis) Docker file - is used by the Travis-CI infrastructure to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file - might be used to build the Docker container that allows to compile the LaTeX code on your local machine without the need to install any LaTeX files.
 
 On order to build the Docker image you have to type the following command:
 
