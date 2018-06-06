@@ -9,8 +9,8 @@ all: clean
 	@pdflatex ${MASTER}.tex
 
 publish: all
-	@ps2pdf14 -dPDFSETTINGS=/prepress thesis.pdf
-	@mv thesis.pdf.pdf thesis.pdf
+	@ps2pdf14 -dPDFSETTINGS=/prepress ${MASTER}.pdf
+	@mv ${MASTER}.pdf.pdf ${MASTER}.pdf
 
 clean:
 	@rm -rf *run.xml *-blx.bib *.aux *.bbl *.blg *.brf *.log *.lof *.lot *.lol *.out *.tcp *.toc *.tps *.bak *.backup *.pdfsync *.synctex.gz *.*~
