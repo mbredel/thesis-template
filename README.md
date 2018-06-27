@@ -19,6 +19,7 @@ This LaTeX-template might be used to write a bachelor or master thesis at the Co
 * [Usage](#usage)
   * [Writing abstracts](#writing-abstracts "Adding abstracts to the thesis")
   * [Adding content](#adding-content "Adding chapters to the thesis")
+  * [Changing the Citation Style](#changing-the-citation-style "Changing the citation style from IEEE Numeric to IEEE Alphabetic")
   * [Compiling the LaTeX source code](#compiling-the-latex-source-code)
   * [Using Docker](#using-docker "Using Docker for compiling the LaTeX code")
 * [Known issues](#known-issues)
@@ -157,6 +158,18 @@ By default, the thesis template, i.e. the _thesis.tex_-file, contains (includes)
 ```
 
 You may also want to have a look at the _part(...)_ section at line 93 and 103. You may want to change the titles of the _part(...)_-sections. Alternatively, you remove the _part(...)_ section and the corresponding _cleardoublepage_ the line before.
+
+### Changing the Citation Style
+
+By default, this template uses the IEEE Numeric style for citations. The IEEE citation style includes in-text citations, numbered in square brackets, which refer to the full citation listed in the reference list at the end of the paper. The reference list is organized numerically, not alphabetically. For examples, see the [IEEE Editorial Style Manual](http://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE_Style_Manual.pdf). 
+
+However, if you prefer to uses the IEEE Alphabetic style for citations, as suggested in the [Richtlinien zur Anfertigung der Bachelorarbeit](https://www.fbi.h-da.de/fileadmin/Inhalt/dokumente/Bachelor/BachelorProjekt/Richtlinien_Bachelorarbeit_070619.pdf) you can do so. To this end, you have to change lines 90 and 91 of _classicthesis-config.tex_:
+
+```
+ %style=numeric-comp,%
+ style=alphabetic,%
+```
+
 
 ### Compiling the LaTeX source code
 
