@@ -210,7 +210,7 @@ On order to build the Docker image you have to type the following command:
 Creating the image requires a working (and hopefully fast) Internet connection. It may take several minutes to download the required base-images as well as all needed dependencies. You only have to create the image once. When the image is build, you can run the Docker container by executing the following commad
 
 ```
- $ docker run --volume $(pwd):/thesis-template/ mbredel/thesis-template && docker rm $(docker ps -lq)
+ $ docker run --volume "$(pwd)":/thesis-template/ mbredel/thesis-template && docker rm $(docker ps -lq)
  ```
 
 inside the root directory containing the LaTeX code. The command mounts the current directory into the Docker container, runs the "publish" make target, and thus compiles the LaTeX code into a PDF file. Finally, the command removes the container again, as it is not needed anymore. You may re-compile the LaTeX code by re-running the "docker run ..." command again.
