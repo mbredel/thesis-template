@@ -220,3 +220,7 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+
+# any other stuff
+*.swp
+*.sic
