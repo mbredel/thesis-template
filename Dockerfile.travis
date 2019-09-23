@@ -17,9 +17,5 @@ RUN apt-get -qq update && apt-get install -y --no-install-recommends \
     texlive-science \
     chktex
 
-# Copy the current LaTeX code to the Docker image.
-RUN mkdir -p /thesis-template
-COPY ./ /thesis-template/
-
 # Command to actually build the LaTeX code.
 CMD ["make", "--directory", "/thesis-template/", "test"]
