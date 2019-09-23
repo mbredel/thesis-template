@@ -8,4 +8,4 @@ services:
 before_install:
   - docker pull mbredel/thesis-template:latest 
 script:
-  - docker run mbredel/thesis-template:latest
+  - docker run --volume $(pwd):/thesis-template/ mbredel/thesis-template:latest
