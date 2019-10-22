@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arsclassica Article
+% Structure Specification File
+%
+% This file has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Lorenzo Pantieri (http://www.lorenzopantieri.net) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	REQUIRED PACKAGES
+%----------------------------------------------------------------------------------------
+
+\usepackage[
+nochapters, % Turn off chapters since this is an article        
+beramono,   % Use the Bera Mono font for monospaced text (\texttt)
+eulermath,  % Use the Euler font for mathematics
+pdfspacing, % Makes use of pdftex’ letter spacing capabilities via the microtype package
+dottedtoc   % Dotted lines leading to the page numbers in the table of contents
+]{classicthesis}
+
+\usepackage{arsclassica} % Modifies the Classic Thesis package
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+
+\usepackage{graphicx} % Required for including images
+
+\usepackage{enumitem} % Required for manipulating the whitespace between and within lists
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+%\usepackage{subfig} % Required for creating figures with multiple parts (subfigures)
+
+\usepackage{amsmath,amssymb,amsthm} % For including math equations, theorems, symbols, etc
+
+\usepackage{varioref} % More descriptive referencing
+
+\usepackage[english,american,ngerman]{babel} % Some languages
+
+\usepackage{subcaption} % Required for creating figures with multiple parts (subfigures)
+
+\usepackage{multirow} % Group the fields of several lines into one column.
+
+\usepackage{makecell} % Com­mon lay­outs for tab­u­lar col­umn heads in whole doc­u­ment
+
+\usepackage{float} % Pro­vides the H float mod­i­fier op­tion
+
+\usepackage{hyperref} % Han­dle cross-ref­er­enc­ing com­mands in LATEX to pro­duce hy­per­text links
+
+\usepackage{cleveref} % En­hances LATEX’s cross-ref­er­enc­ing fea­tures
+
+\usepackage{rotating} % Rotate figures and tables
+
+\usepackage{xcolor} % Pro­vides easy driver-in­de­pen­dent ac­cess to sev­eral kinds of colors
+\definecolor{lightlightgray}{RGB}{230,230,230}
+
+\usepackage{listings} % Type­set pro­grams (pro­gram­ming code) 
+\lstset{
+    %aboveskip=1em,
+    %belowskip=1em,
+    basicstyle=\ttfamily,
+    breaklines=true,
+    xleftmargin=2em,
+    framexleftmargin=2em,
+    frame=tb,
+    framesep=1em,
+    %framerule=0pt,
+    backgroundcolor=\color{lightlightgray}
+}
+
+\PassOptionsToPackage{hyphens}{url}
+
+%----------------------------------------------------------------------------------------
+%	PARAGRAPH STYLES
+%----------------------------------------------------------------------------------------
+
+\setlength{\parskip}{0.5em}
+
+%----------------------------------------------------------------------------------------
+%	THEOREM STYLES
+%----------------------------------------------------------------------------------------
+
+\theoremstyle{definition} % Define theorem styles here based on the definition style (used for definitions and examples)
+\newtheorem{definition}{Definition}
+
+\theoremstyle{plain} % Define theorem styles here based on the plain style (used for theorems, lemmas, propositions)
+\newtheorem{theorem}{Theorem}
+
+\theoremstyle{remark} % Define theorem styles here based on the remark style (used for remarks and notes)
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%---------------------------------------------------------------------------------------
+
+\hypersetup{
+%draft, % Uncomment to remove all links (useful for printing in black and white)
+colorlinks=true, breaklinks=true, bookmarks=true,bookmarksnumbered,
+urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, % Link colors
+pdftitle={}, % PDF title
+pdfauthor={\textcopyright}, % PDF Author
+pdfsubject={}, % PDF Subject
+pdfkeywords={}, % PDF Keywords
+pdfcreator={pdfLaTeX}, % PDF Creator
+pdfproducer={LaTeX with hyperref and ClassicThesis} % PDF producer
+}

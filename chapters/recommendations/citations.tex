@@ -1,0 +1,97 @@
+%%
+%%
+%%
+\section{Richtig Zitieren}\label{sec:citations}
+%
+Jeder in der eigenen Arbeit verwendete Gedanke aus anderen Quellen ist zu zitieren! Sobald sich ein Gedanke nicht nur über ein paar Sätze, sondern über mehrere Seiten erstreckt, ist dies zu verdeutlichen. Hierbei gilt als Grundregel, dass unbedingt zu unterscheiden ist, ob auf einen wissenschaftlichen Kontext verwiesen wird, wie etwa auf eine Diskurs-Entwicklung, oder ob Gedanken anderer Autorinnen indirekt wiedergegeben werden. Die indirekte Wiedergabe des Gedankenguts anderer Autorinnen muss nachvollziehbar gekennzeichnet werden und darf nicht lediglich als vergleichendes Zitat benannt werden, ohne dass es zu einer ausformulierten Einordnung oder Diskussion kommt. Die Nachvollziehbarkeit von verwendetem Quellenmaterial muss präzise, eindeutig und unmissverständlich erfolgen.
+
+Das Zitationsverfahren kann frei gewählt werden. In der Informatik allgemein üblich sind z.B. das Verfahren nach IEEE~\cite{} oder das Harvard-Verfahren~\cite{}. Solange aber einheitlich und vor allem richtig zitiert wird, hat das Zitierverfahren an sich aber keinen Einfluss auf die Note.
+
+%%
+%%
+\subsection{Direkte (wörtliche) Zitate}\label{sec:citations:direct}
+%
+In der Regel werden die Inhalte im Text sinngemäß, also indirekt übernommen. In einigen Fällen kann es jedoch sinnvoll sein wörtlich zitiert werden. Dies gilt z.B.:
+%
+\begin{itemize}
+  \item wenn der betreffende Zusammenhang nicht besser - und vor allem nicht kürzer - wiedergegeben werden kann
+  \item wenn Zusammenhänge analysiert und interpretiert werden müssen, z.B. bei kritischen Äußerungen
+  \item bei ausländischer Literatur als Ergänzung zum sinngemäßen Zitat (Übersetzung)
+  \item bei anerkannten Begriffsbestimmungen und Lehrmeinungen
+\end{itemize}
+\smallskip
+
+Beim wörtlichen Zitat wird ein Gedanke wörtlich - einschließlich aller Zeichen, Fehler etc. -
+wiedergegeben. Für das wörtliche Zitieren gelten zudem folgende allgemeine Regeln:
+%
+\begin{itemize}
+  \item wörtliche Zitate sollten so kurz wie möglich sein
+  \item unnötig häufiges wörtliches Zitieren ist zu vermeiden
+  \item aneinanderreihen von wörtlichen Zitaten ist zu vermeiden
+\end{itemize}
+\smallskip
+
+In jedem Fall muss ersichtlich sein, was an fremdem Eigentum, aus welcher Quelle, in welchem Umfang und in welcher Form (wörtlich, sinngemäß) übernommen wurde
+
+%%
+%%
+\subsection{Indirekte (sinngemäße) Zitate}\label{sec:citations:indirect}
+%
+Indirekte Zitate kommen in wissenschaftlichen Arbeiten häufiger als direkte Zitate vor. Ein indirektes Zitat zeichnet sich dadurch aus, dass eine Aussage eines Autors sinngemäß mit eigenen Worten wiedergegeben wird.
+
+Im Gegensatz zu einem wörtlichen Zitat müssen sinngemäße Zitate nicht durch Anführungszeichen gekennzeichnet werden. Es sollte aber darauf geachtet werden, dass der Umfang eines sinngemäßen Zitats klar erkenntlich und dass jedes indirekte Zitat durch eine Belegangabe nachprüfbar ist.
+
+%%
+%%
+\subsection{Zitieren von fremdsprachlichen Texten}\label{sec:citations:forgein_languages}
+%
+Bei fremdsprachigen Texten ist darauf zu achten, dass Zitate die Lesbarkeit beeinflussen können. Es kann davon ausgegangen werden, dass der Leser die englische Sprache, aber nicht die französische, schwedische, japanische, russische, (...) Sprache beherrscht. Sobald derartige Quellen verwendet werden, ist eine Übersetzung anzustreben. Damit wird allerdings das wörtliche Zitieren aufgegeben. Es ist angebracht, den fremdsprachigen Text sinngemäß zu übersetzen und das wörtliche Zitat in einer Fußnote einzufügen, damit der Leser die Richtigkeit der Übersetzung überprüfen kann.
+
+%%
+%%
+\subsection{Zitieren von Wikipedia}\label{sec:citations:wikipedia}
+%
+Das Zitieren von Wikipedia-Artikeln wird immer wieder kontrovers diskutiert. Innerhalb von wissenschaftlichen Arbeiten ist auf Grund der Unverlässlichkeit der Artikel mit besonderer Vorsicht zu genießen und im Zweifelsfall zu unterlassen. Für eine wissenschaftliche Arbeit sollten immer Primärquellen bevorzugt werden.
+
+Wikipedia schreibt dazu selbst~\cite{wikipedia:citing}:
+
+\begin{quote}
+  \glqq As with any source, especially one of unknown authorship, you should be wary and independently verify the accuracy of Wikipedia information if possible. For many purposes, but particularly in academia, Wikipedia may not be an acceptable source.\grqq{}
+\end{quote}
+
+Das die Wikipedia nicht immer als verlässliche Quelle fungiert, hat sie bereits mehrfach spektakulär gezeigt. So erhielt der ehemalige Deutsche Außenminister Karl-Theodor zu Guttenberg einen zusätzlichen Vornamen~\cite{bildblog:guttenberg, spiegel:guttenberg} und die Karl-Marx-Allee in Berlin-Friedrichshain einen frei erfundenen Kosenamen~\cite{rundschau:wikipedia}.
+
+Wenn dennoch aus Wikipedia zitiert wird, sollte in jedem Fall der Permanent-Link und so wie auch bei allen anderen Online-Quellen, das Datum des Zugriffs angegeben werden. Darüber hinaus sollte der von Wikipedia vorgeschlagene BibTeX-Eintrag verwendet werden:
+
+\begin{lstlisting}
+  @misc{wikipedia:plagiarism,
+    author = "Wikipedia contributors",
+    title  = "Plagiarism --- {W}ikipedia{,} The Free Encyclopedia",
+    year   = "2004",
+    url    = "http://en.wikipedia.org/w/index.php?title=Plagiarism&oldid=5139350",
+    note   = "[Online; accessed 22-July-2004]"
+  }
+\end{lstlisting}
+\smallskip
+
+Diese Zitierweise kann so auch für andere Online-Referenzen genutzt werden.
+
+%%
+%%
+\subsection{Plagiate}\label{sec:citations:plagiarism}
+%
+Ein Plagiat (vom lat. Wort plagium, \glqq Menschenraub\grqq{} abgeleitet) ist die Vorlage fremden geistigen Eigentums bzw. eines fremden Werkes als eigenes oder Teil eines eigenen Werkes. Dieses kann sowohl eine exakte Kopie, eine Bearbeitung (Umstellung von Wörtern oder Sätzen), eine Nacherzählung (Strukturübernahme) oder eine Übersetzung sein. Entscheidend, ob es sich um ein Plagiat handelt oder nicht, ist in der Wissenschaft immer die Vorgabe der eigenen geistigen Urheberschaft, d. h. wenn z. B. Zitate oder verwendete Literatur nicht als fremdes geistiges Eigentum kenntlich gemacht wurden~\cite{wikipedia:plagiarism, wulff:2013:01}.
+
+Ziel einer wissenschaftlichen Arbeit ist es, eigene Gedanken, Argumente und Ergebnisse aufzuschreiben und zu präsentieren. Hierzu ist es in der Regel unabdingbar, fremde Arbeiten zu nutzen und zu zitieren, z.B. um die Relevanz der eigenen Arbeit hervorzuheben oder sie gegen andere Arbeiten abzugrenzen. Dabei muss jedoch gelten, dass ein Zitat immer als solches gekennzeichnet sein muss. Ein \glqq Zitat ohne Anführungszeichen\grqq{} nennt man Plagiat~\cite{eco:2010:01}.
+
+%%
+\subsubsection{Die rechtlichen Folgen eines Plagiats?}\label{sec:citations:plagarism:law}
+%
+Ein Autor gibt fremde Werke komplett oder in Teilen als sein Eigenes aus. Dies verstößt im Allgemeinen gegen das Urheberrecht, sofern das gestohlene Werk urheberrechtlich geschützt ist. 
+
+Innerhalb der Wissenschaftsgemeinschaft führt ein solches Verhalten unter Umständen zum Ausschluss aus Forschungsprojekten und Förderungen~\cite{dfg:2013:01}. Zudem gelten Plagiate als Täuschungsversuch und werden entsprechend der geltenden allgemeinen Studien- und Prüfungsordnung geahndet. Das bedeutet im Besonderen, dass die jeweiligen Prüfer die Arbeit sehr konsequent auf mögliche Plagiate überprüfen werden. Eine Arbeit, bei der ein Plagiat erkannt wurde, wird mit der Note \glqq Nicht Genügend\grqq{} (5) begutachtet. In besonders schwerwiegenden Fällen, führt ein Plagiatsversuch zur Exmatrikulation damit zum sofortigen Ende des Studiums – natürlich ohne Abschluss.
+
+Darüber hinaus stellen Plagiate im Rahmen der Bachelor- und Masterarbeiten einen Verstoß
+gegen die eidesstattliche Erklärung dar. Eine solche wahrheitswidrige Erklärung kann
+strafrechtliche Konsequenzen nach sich ziehen.
+
