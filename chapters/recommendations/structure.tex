@@ -85,7 +85,20 @@ Das Inhaltsverzeichnis muss über die Kapitel und Unterkapitel hinaus alle weite
 %
 Ein Abbildungs-, Tabellen- und Quellcodeverzeichnis ist immer erforderlich, wenn eine gewissen Anzahl, i.d.R. mehr als 3-5, Abbildungen, Tabellen oder  Quellcode-Listings im Text enthalten ist.
 
-In den Verzeichnissen sollen keine Referenzen oder Quellenangaben auftauchen. Darauf sollte besonders geachtet werden, wenn die Verzeichnisse automatisch aus den Unterschriften der jeweiligen Abbildungen, Tabellen oder Quellcodes erzeugt werden.
+In den Verzeichnissen sollen keine Referenzen oder Quellenangaben auftauchen. Darauf sollte besonders geachtet werden, wenn die Verzeichnisse automatisch aus den Unterschriften der jeweiligen Abbildungen, Tabellen oder Quellcodes erzeugt werden. In Latex ist dies mit dem \textbackslash caption-Befehl möglich.
+\medskip
+
+Ein \LaTeX-Beispiel:
+%
+\begin{lstlisting}[caption={Ein Beispiel dafür wie Bildunterschriften in Latex realisiert werden können, ohne dass Referenzen in das Abbildungsverzeichnis übernommen werden. Der Caption-Text in eckigen Klammern erscheint im Verzeichnis; der Text in geschweiften Klammern erscheint als Bildunterschrift.},captionpos=b,escapeinside={(*}{*)}]
+\begin{figure}[tb]
+   \center
+   \includegraphics[width=1.0\textwidth]{gfx/data_flow}
+   (*\bfseries \textbackslash caption[Kurzer Text für Verzeichnisse ohne Referenzen.]\{Langer *)
+       (*\bfseries Text für Bildunterschriften mit Referenzen.\}*)
+   \label{fig:background:802.11:data-flow}
+\end{figure}
+\end{lstlisting}
 
 %%
 \subsubsection{Abkürzungsverzeichnis}\label{sec:structure:tables:abrev}
