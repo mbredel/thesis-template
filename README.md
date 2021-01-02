@@ -199,7 +199,7 @@ generates a bz2-package file, which contains all the source files of your LaTeX 
 
 ### Using Docker
 
-The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - build by the [Dockerfile.travis]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.travis) Docker file - is used by the Travis-CI infrastructure to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file - might be used to build the Docker container that allows to compile the LaTeX code on your local machine without the need to install any LaTeX files.
+The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - build by the [Dockerfile.ci]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.ci) Docker file - is used by the CI to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file - might be used to build the Docker container that allows to compile the LaTeX code on your local machine without the need to install any LaTeX files.
 
 On order to build the Docker image you have to type the following command:
 
