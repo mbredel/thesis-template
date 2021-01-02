@@ -1,0 +1,14 @@
+on: [push, pull_request]
+
+name: template
+
+jobs:
+  test-latex-template:
+    runs-on: ubuntu-20.04
+    name: Test LaTeX Template 
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Build
+        run: |
+          docker pull mbredel/thesis-template:latest
+          docker run --volume $(pwd):/thesis-template/ mbredel/thesis-template:latest
