@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mbredel/thesis-template.svg?branch=master)](https://travis-ci.org/mbredel/thesis-template)
+[![Build Status](https://github.com/mbredel/thesis-template/workflows/template/badge.svg)](https://github.com/mbredel/thesis-template/actions)
 
 # A thesis LaTeX-template
 
