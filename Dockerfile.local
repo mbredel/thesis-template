@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-MAINTAINER mbredel "https://github.com/mbredel"
+LABEL maintainer="mbredel https://github.com/mbredel"
 
 # Install packages for building the LaTeX template.
 RUN apt-get -qq update && apt-get install -y --no-install-recommends \
