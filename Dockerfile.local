@@ -1,11 +1,13 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 
 LABEL maintainer="mbredel https://github.com/mbredel"
+
+# Set the frontend to noninteractive to configure the time zone
+ARG DEBIAN_FRONTEND=noninteractive
 
 # Install packages for building the LaTeX template.
 RUN apt-get -qq update && apt-get install -y --no-install-recommends \
     make \
-    apt-utils \
     ghostscript \
     texlive \
     texlive-bibtex-extra \
@@ -13,9 +15,10 @@ RUN apt-get -qq update && apt-get install -y --no-install-recommends \
     texlive-lang-english \
     texlive-lang-german \
     texlive-latex-extra \
-    texlive-math-extra \
     texlive-publishers \
     texlive-science \
+    texlive-pstricks \
+    texlive-pictures \
     chktex
 
 # Command to actually build the LaTeX code.
