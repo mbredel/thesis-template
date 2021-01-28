@@ -42,7 +42,7 @@ The default output of the LaTeX thesis template is a single-sided style that als
 \documentclass[ openright,titlepage,numbers=noenddot,headinclude,twoside,%
                 footinclude=true,cleardoublepage=empty,abstractoff,%
                 BCOR=5mm,paper=a4,fontsize=11pt,%
-                ngerman,american,%
+                ngerman,american,%lockflag%
                 ]{scrreprt}
 ``` 
 
