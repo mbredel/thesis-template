@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mbredel/thesis-template.svg?branch=master)](https://travis-ci.org/mbredel/thesis-template)
+[![Build Status](https://github.com/mbredel/thesis-template/workflows/template/badge.svg)](https://github.com/mbredel/thesis-template/actions)
 
 # A thesis LaTeX-template
 
@@ -199,7 +199,7 @@ generates a bz2-package file, which contains all the source files of your LaTeX 
 
 ### Using Docker
 
-The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - build by the [Dockerfile.travis]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.travis) Docker file - is used by the Travis-CI infrastructure to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file - might be used to build the Docker container that allows to compile the LaTeX code on your local machine without the need to install any LaTeX files.
+The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - build by the [Dockerfile.ci]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.ci) Docker file - is used by the CI to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file - might be used to build the Docker container that allows to compile the LaTeX code on your local machine without the need to install any LaTeX files.
 
 On order to build the Docker image you have to type the following command:
 
@@ -207,7 +207,7 @@ On order to build the Docker image you have to type the following command:
  $ docker build --tag mbredel/thesis-template --file Dockerfile.local .
 ```
 
-Creating the image requires a working (and hopefully fast) Internet connection. It may take several minutes to download the required base-images as well as all needed dependencies. You only have to create the image once. When the image is build, you can run the Docker container by executing the following commad
+Creating the image requires a working (and hopefully fast) Internet connection. It may take several minutes to download the required base-images as well as all needed dependencies. You only have to create the image once. When the image is build, you can run the Docker container by executing the following command
 
 ```
  $ docker run --volume $(pwd):/thesis-template/ mbredel/thesis-template && docker rm $(docker ps -lq)
