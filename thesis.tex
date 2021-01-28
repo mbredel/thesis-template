@@ -35,7 +35,7 @@
 \documentclass[ openright,titlepage,numbers=noenddot,headinclude,%twoside, %1headlines,% letterpaper a4paper
                 footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
                 BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
-                ngerman,american,%
+                ngerman,american,%lockflag%
                 ]{scrreprt}
 
 %*************************************************************************
@@ -73,6 +73,7 @@
 %\cleardoublepage\include{frontbackmatter/Dedication}
 %\cleardoublepage\include{frontbackmatter/Foreword}
 \cleardoublepage\include{frontbackmatter/Declaration}
+\condLOCK{\cleardoublepage\include{frontbackmatter/BlockingNotice}}
 \cleardoublepage\include{frontbackmatter/AbstractEN}
 \cleardoublepage\include{frontbackmatter/AbstractDE}
 %\cleardoublepage\include{frontbackmatter/Publications}
@@ -94,6 +95,11 @@
 \include{chapters/examples/chapter01}
 \include{chapters/examples/chapter02}
 \include{chapters/examples/chapter03}
+%*************************************************************************
+% Recommendations
+%*************************************************************************
+%\part{Empfehlungen zur Erstellung wissenschaftlicher Abschlussarbeiten}
+%\label{pt:recommendations}
 %*************************************************************************
 % Backmatter
 %*************************************************************************
