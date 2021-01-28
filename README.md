@@ -2,7 +2,7 @@
 
 # A thesis LaTeX-template
 
-This LaTeX-template might be used to write a bachelor or master thesis at the Computer Science department at [h_da University of Applied Sciences](https://www.fbi.h-da.de/fbi.html "Hochschule Darmstadt, University of Applied Sciences") in Darmstadt. It is based on the fabulous ClassicThesis style template of [Andre Miedé](http://www.miede.de/ "Prof. Dr. Andre Miedé"). It is adapted to meet the current style guide for bachelor and master theses at the Computer Science department of h_da, as outlined in [Empfehlungen zur Erstellung wissenschaftlicher Abschlussarbeiten](https://fbi.h-da.de/fileadmin/Group_Dekanat/Dokumente/Studium/Group_Bachelor-Koordinator/BSc/empfehlungen_zu_abschlussarbeiten.pdf)
+This LaTeX-template might be used to write a bachelor or master thesis at the Computer Science department at [h_da University of Applied Sciences](https://www.fbi.h-da.de/fbi.html "Hochschule Darmstadt, University of Applied Sciences") in Darmstadt. It is based on the fabulous ClassicThesis style template of [Andre Miedé](http://www.miede.de/ "Prof. Dr. Andre Miedé"). It is adapted to the current style guide for bachelor and master theses in the computer science department of h_da, as outlined in [Empfehlungen zur Erstellung wissenschaftlicher Abschlussarbeiten](https://fbi.h-da.de/fileadmin/Group_Dekanat/Dokumente/Studium/Group_Bachelor-Koordinator/BSc/empfehlungen_zu_abschlussarbeiten.pdf)
 
 ## Table of contents
 
