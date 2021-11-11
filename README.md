@@ -28,7 +28,7 @@ This LaTeX-template might be used to write a bachelor or master thesis at the Co
 ## Configuration
 
 The LaTeX template can be modified and configured easily using a very limited number of files, namely _classicthesis-config.tex_, _hdathesis-config.tex_, and _thesis.tex_. Only use these three files to modify your LaTeX thesis. Please _DO NOT_ modify the actual LaTeX code for your thesis (as this becomes quite complex and consumes a lot of time). 
-Please finde a brief description of the various configuration options below:
+Please find a brief description of the various configuration options below:
 
 ### thesis.tex
 
@@ -72,7 +72,7 @@ While this thesis template supports umlauts, i.e. ÄÖÜäöüß, in the main te
 
 ##### Table of content, figures, tables, listings, and acronyms
 
-By default, the thesis templates prints a lot of table of content, i.e. for figures, tables, listings, and aconyms. You may want to remove such tables if you only have a very limited number, i.e. less then 3-5, of figures, tables, listings, and acronyms. Simply comment the related line in _thesis.tex_ starting at line 81.
+By default, the thesis templates prints a lot of table of content, i.e. for figures, tables, listings, and acronyms. You may want to remove such tables if you only have a very limited number, i.e. less than 3-5, of figures, tables, listings, and acronyms. Simply comment the related line in _thesis.tex_ starting at line 81.
 
 ```
 %\cleardoublepage\include{frontbackmatter/Figures}
@@ -106,7 +106,7 @@ This is where you have to place all the personal stuff of your thesis, starting 
 
 #### Umlauts
 
-This thesis templates supports German umlauts in the main text. However, if you need umlauts on the title page, say in your title, your name, and your professor's name, you have to use the native LaTeX way of writing umlauts. Please see the following table:
+This thesis template supports German umlauts in the main text. However, if you need umlauts on the title page, say in your title, your name, and your professor's name, you have to use the native LaTeX way of writing umlauts. Please see the following table:
 
 | Umlaut | LaTeX way |
 |--------|-----------|
@@ -136,7 +136,7 @@ You have to modify both these files and place your abstract text in _AbstractDE.
 
 ### Adding content
 
-By default, the thesis template, i.e. the _thesis.tex_-file, contains (includes) some default content files for chapters and appendix from the _./chapters/examples/_-directory (starting a line 94). You have to remove those includes and include your own files. Please note that it is best practice to put all your content in seperate files.
+By default, the thesis template, i.e. the _thesis.tex_-file, contains (includes) some default content files for chapters and appendix from the _./chapters/examples/_-directory (starting a line 94). You have to remove those includes and include your own files. Please note that it is best practice to put all your content in separate files.
 
 ```
 \cleardoublepage
@@ -199,9 +199,9 @@ generates a bz2-package file, which contains all the source files of your LaTeX 
 
 ### Using Docker
 
-The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - build by the [Dockerfile.ci]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.ci) Docker file - is used by the CI to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file - might be used to build the Docker container that allows to compile the LaTeX code on your local machine without the need to install any LaTeX files.
+The h_da thesis template ships with two Dockerfiles that create [Docker](https://www.docker.com) container used to compile the LaTeX code. One container - built by the [Dockerfile.ci]( https://github.com/mbredel/thesis-template/blob/master/Dockerfile.ci) Docker file - is used by the CI to compile the thesis template and check its integrity at every commit. The other one - created by the [Dockerfile.local](https://github.com/mbredel/thesis-template/blob/master/Dockerfile.local) Docker file - might be used to build the Docker container that allows to compile the LaTeX code on your local machine without the need to install any LaTeX files.
 
-On order to build the Docker image you have to type the following command:
+In order to build the Docker image you have to type the following command:
 
 ```
  $ docker build --tag mbredel/thesis-template --file Dockerfile.local .
@@ -210,7 +210,7 @@ On order to build the Docker image you have to type the following command:
 Creating the image requires a working (and hopefully fast) Internet connection. It may take several minutes to download the required base-images as well as all needed dependencies. You only have to create the image once. Once the image is created, you can run the Docker container by running the following command
 
 ```
- $ docker run --volume $(pwd):/thesis-template/ mbredel/thesis-template && docker rm $(docker ps -lq)
+ $ docker run --volume "$(pwd)":/thesis-template/ mbredel/thesis-template && docker rm $(docker ps -lq)
  ```
 
 inside the root directory containing the LaTeX code. The command mounts the current directory into the Docker container, runs the "publish" make target, and thus compiles the LaTeX code into a PDF file. Finally, the command removes the container again, as it is not needed anymore. You may re-compile the LaTeX code by re-running the "docker run ..." command again.
