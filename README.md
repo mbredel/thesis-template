@@ -161,13 +161,13 @@ You may also want to have a look at the _part(...)_ section at line 93 and 103. 
 
 ### Changing the Citation Style
 
-By default, this template uses the IEEE Numeric style for citations. The IEEE citation style includes in-text citations, numbered in square brackets, which refer to the full citation listed in the reference list at the end of the paper. The reference list is organized numerically, not alphabetically. For examples, see the [IEEE Editorial Style Manual](http://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE_Style_Manual.pdf). 
+By default, this template uses the IEEE Alphabetic style for citatons. The IEEE citation style includes in-text citations in square brackets, which refer to the full citation listed in the reference list at the end of the paper. The reference list is organized alphabetically.
 
-However, if you prefer to uses the IEEE Alphabetic style for citations you can do so. To this end, you have to change lines 90 and 91 of _classicthesis-config.tex_:
+However, if you prefer to uses the old IEEE Numeric style for citations you can do so. To this end, you have to change lines 90 and 91 of _classicthesis-config.tex_:
 
 ```
- %style=numeric-comp,%
- style=alphabetic,%
+ style=numeric-comp,%
+ %style=alphabetic,%
 ```
 
 
