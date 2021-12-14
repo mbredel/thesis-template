@@ -12,4 +12,12 @@
   \addcontentsline{toc}{chapter}{\tocEntry{#1}}%
   \chapter*{#1}%
 }
+
+% allow Linebreaks in urls anywhere
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setcounter{biburllcpenalty}{100}
+% enable to long words to break anywhere by increasing the allowed whitespace between words.
+\sloppy
+
 \printbibliography[heading=bibintoc]
