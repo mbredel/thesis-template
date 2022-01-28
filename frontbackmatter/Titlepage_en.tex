@@ -1,0 +1,65 @@
+%*******************************************************
+% Titlepage
+%*******************************************************
+%%%
+%%% title page (english)
+%%%
+\thispagestyle{empty}
+\pdfbookmark[0]{Titelblatt}{title}
+\begin{titlepage}
+
+  % If printed on two sides, center the title page
+  \condTWOSIDE{\changetext{}{19mm}{}{19mm}{}}
+
+  \vspace{1cm}
+  \begin{center}
+    \includegraphics[width=7.7cm]{gfx/logo_h-da_rot} \\ 
+  \end{center}
+
+  \begin{center}
+    \vspace{0.1cm}
+    \huge \textbf{Darmstadt University of Applied Sciences}\\
+    \vspace{0.4cm}
+    \LARGE -- Faculty of Computer Science --
+  \end{center}
+
+  \vfill
+  \vfill
+
+  \begin{center}
+    \LARGE \textbf{\myTitle}
+  \end{center} 
+
+  \vfill
+  \vfill
+
+  \begin{center}
+    \Large Submitted in partial fulfilment of the requirements for the degree of\\
+    \vspace{0.3cm}
+    \Large \myDegree
+  \end{center}
+
+  \vfill
+
+  \begin{center}
+    \Large by\\
+    \vspace{0.3cm}
+    \Large \textbf{\myName}\\
+    \vspace{0.3cm}
+    \normalsize Matriculation number: \myId
+  \end{center}
+
+  \vfill
+  \vfill
+
+  \begin{center}
+    \begin{tabular}{lll}
+      First Examiner   & : & \myProf \\
+      Second Examiner & : & \myOtherProf
+    \end{tabular}
+  \end{center} 
+
+  % If printed on two sides, center the title page
+  \condTWOSIDE{\changetext{}{-19mm}{}{-19mm}{}}
+
+\end{titlepage}
