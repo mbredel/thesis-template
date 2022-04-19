@@ -27,10 +27,10 @@ test: clean
 
 bz2: clean
 	@echo 'creating package including Docs'
-	@tar --exclude-vcs -cf `pwd`/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`.tar `pwd`/../`pwd | sed "s,^\(.*/\)\?\([^/]*\),\2,"`
-	@bzip2 `pwd`/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`.tar
+	@tar --exclude-vcs -cf "`pwd`"/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`.tar "`pwd`"/../"`pwd | sed "s,^\(.*/\)\?\([^/]*\),\2,"`"
+	@bzip2 "`pwd`"/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`.tar
 
 bz2-small: clean
 	@echo 'creating package excluding Docs'
-	@tar --exclude-vcs --exclude=Docs -cf `pwd`/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`_small.tar `pwd`/../`pwd | sed "s,^\(.*/\)\?\([^/]*\),\2,"`
-	@bzip2 `pwd`/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`_small.tar
+	@tar --exclude-vcs --exclude=Docs -cf "`pwd`"/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`_small.tar "`pwd`"/../"`pwd | sed "s,^\(.*/\)\?\([^/]*\),\2,"`"
+	@bzip2 "`pwd`"/../${MASTER}-${NAME}_${SURNAME}-${VERSION}-`date +%Y%m%d`_small.tar
